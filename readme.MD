@@ -1,13 +1,13 @@
-#CBNU-OpenSW-22-2
+# CBNU-OpenSW-22-2
 
-###TEAM 1등 JAVA
+### TEAM 1등 JAVA
 
 -----------
 
-####프로젝트 주제 - 이것저것
+#### 프로젝트 주제 - 이것저것
 
-####개발 소스 - JAVA, JAVASCRIPT, HTML, CSS
-####개발 기간 - 2022.09 ~ 2022.12
+#### 개발 소스 - JAVA, JAVASCRIPT, HTML, CSS
+#### 개발 기간 - 2022.09 ~ 2022.12
 
 
 김나영(2021041059) - kny2383@gmail.com
