@@ -66,9 +66,9 @@
         <div class="uk-width-1-1 uk-width-expand@s uk-padding-small">
             <div class="uk-width-1-1">
                 <p>안녕하세요 영화 SNS입니다 감사합니다</p>
-                <p>뿡</p>
+                <p></p>
             </div>
-            <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-sortable="handle: .uk-card" uk-grid="masonry: true">
+            <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-grid="masonry: true">
                 <div class="">
                     <div class="uk-card uk-card-default">
                         <div>
@@ -140,15 +140,15 @@
                     </div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default">
+                    <div id="sample-div" class="uk-card uk-card-default">
                         <div>
-                            <img src="img/sample-silverlake.jpeg" style="width: 100%">
+                            <img id="sample-img" src="img/sample-silverlake.jpeg" style="width: 100%">
                         </div>
                         <div class="uk-card-body">
                             <dl class="uk-description-list">
-                                <h5>언더 더 실버레이크</h5>
-                                <dd>2019년 개봉</dd>
-                                <dd>앤드류 가필드 주연</dd>
+                                <h5 style="color: rgba(211, 220, 227)">언더 더 실버레이크</h5>
+                                <dd style="color: rgba(196, 163, 101)">2019년 개봉</dd>
+                                <dd style="color: rgba(196, 163, 101)">앤드류 가필드 주연</dd>
                             </dl>
                         </div>
                     </div>
@@ -251,4 +251,39 @@
         </div>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+<script>
+    const colorThief = new ColorThief();
+    const img = document.querySelector('#sample-img');
+    const div = document.querySelector("#sample-div");
+
+    // Make sure image is finished loading
+    if (img.complete) {
+        console.log(colorThief.getColor(img));
+        const colors= "rgba("+ colorThief.getColor(img)[0] +","+ colorThief.getColor(img)[1] +","+ colorThief.getColor(img)[2] + ")";
+        console.log(colors);
+        div.style.backgroundColor = colors;
+        console.log(colorThief.getPalette(img));
+
+        // let space = document.createElement("div");
+        // space.style.height = "20px";
+        // space.style.backgroundColor = "whitesmoke";
+        // div.appendChild(space);
+        // for(let i = 0; i < 10; i++) {
+        //     let newColor = document.createElement("div");
+        //     let newColorCode = "rgba("+ colorThief.getPalette(img)[i][0] +","+ colorThief.getPalette(img)[i][1] +","+ colorThief.getPalette(img)[i][2] + ")";
+        //     newColor.style.height = "20px";
+        //     newColor.style.backgroundColor = newColorCode;
+        //     div.appendChild(newColor);
+        // }
+    } 
+    else {
+        image.addEventListener('load', function() {
+            console.log(colorThief.getColor(img));
+        const colors= "#" + colorThief.getColor(img).toString(16)[0]+ colorThief.getColor(img).toString(16)[1] + colorThief.getColor(img).toString(16)[2];
+        console.log(colors);
+        div.style.backgroundColor = colors;
+    });
+    }
+</script>
 </html>

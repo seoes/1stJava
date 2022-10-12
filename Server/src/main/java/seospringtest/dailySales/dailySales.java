@@ -6,7 +6,7 @@ import java.net.URL;
 import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
-BufferedInputStream w = new BufferedInputStream
+// BufferedInputStream w = new BufferedInputStream;
 public class dailySales {
     public dailySales() throws Exception {
         JSONParser jsonparser = new JSONParser();
