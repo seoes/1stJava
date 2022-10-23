@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <style>
+        #content {
+            height: 600px;
+            width: 600px;
+        }
+    </style>
+    
+</head>
+<body>
+    <button href="#" class="what" id="button1">반가워?</button>
+    <button href="#" class="what" id="button2">미안해?</button>
+    <div id="content">
+        <div>
+            <h1>안녕하세요</h1>
+        </div>
+    </div>
+</body>
+<script>
+    // const button = document.querySelector(".what");
+    // button.addEventListener("click", () => {
+    //     alert("안녕");
+    //     console.log("안녕");
+    // });
+
+    $("#button1").on("click", () => {
+        $('#content').load('ajaxTest1.html');
+    })
+    $("#button2").on("click", () => {
+        $('#content').load('ajaxTest2.html');
+    })
+    // $(document).ready(function() {
+    //     $('body').load('ajaxTest1.html');
+    //     $.ajax('ajaxTest1.html', {
+    //         success: function (data) {
+    //             console.log(data);
+    //             console.log("success");
+    //         }
+    //     })
+    // })
+</script>
+</html>

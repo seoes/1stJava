@@ -33,8 +33,8 @@
     }
 </style>
 <body>
-    <div style="background-color:white; height:100px">
-        hello
+    <div style="background-color:#282828; height:64px">
+        <h2 style="color:#FFFFFF">My Cinema</h2>
     </div>
     <section>
 
@@ -64,10 +64,20 @@
         </div>
         
         <div class="uk-width-1-1 uk-width-expand@s uk-padding-small">
-            <div class="uk-width-1-1">
-                <p>안녕하세요 영화 SNS입니다 감사합니다</p>
-                <p></p>
+            <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-2@m" uk-grid>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h4>일간 박스오피스</h4>
+                    </div>
+                </div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h4>주간 박스오피스</h4>
+                    </div>
+                </div>
             </div>
+            <p>안녕하세요 영화 SNS입니다 감사합니다</p>
+            <p></p>
             <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-grid="masonry: true">
                 <div class="uk-animation-toggle" tabindex="0">
                     <div class="uk-card uk-card-default movie-card">
@@ -266,52 +276,7 @@
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
-<script>
-    const colorThief = new ColorThief();
-    const div = document.querySelectorAll(".movie-card");
-    const img = document.querySelector('.movie-img');
-    const movieTitle = document.querySelector("#movieTitle");
-
-    function getColor(color) {
-        return {
-            rgb : "rgba(" + color[0] + "," + color[1] + "," + color[2] + ")",
-            luma : 0.2126 * color[0] + 0.7152 * color[1] + 0.0722 * color[2]
-        }
-    }
-
-    // Make sure image is finished loading
-    if (img.complete) {
-        div.forEach((card) => {
-            const movieImg = card.querySelector(".movie-img");
-            const movieTitle = card.querySelector(".movie-title");
-            const movieYear = card.querySelector(".movie-year");
-            const movieComment = card.querySelector(".movie-comment");
-
-            const colors = getColor(colorThief.getColor(movieImg));
-            let maxGamma = 0;
-            let titleColor;
-            colorThief.getPalette(movieImg).forEach(color => {
-                const newColor = getColor(color);
-                if(Math.abs(colors.luma - newColor.luma) > maxGamma){
-                    maxGamma = Math.abs(colors.luma - newColor.luma);
-                    console.log("new Luma = " + maxGamma, color)
-                    titleColor = color;
-                }
-            });
-            titleColor = getColor(titleColor)
-            card.style.backgroundColor = colors.rgb;
-            
-            movieTitle.style.color = titleColor.rgb;
-            movieYear.style.color = titleColor.rgb;
-            movieComment.style.color = titleColor.rgb;
-        })
-    } 
-    else {
-        image.addEventListener('load', function() {
-            console.log(colorThief.getColor(img));
-        console.log(colors);
-        div.style.backgroundColor = colors;
-    });
-    }
-</script>
+<script src="js/KobisOpenAPIRestService.js"></script>
+<script src="js/setColor.js"></script>
+<script src="js/getBoxOffice.js"></script>
 </html>

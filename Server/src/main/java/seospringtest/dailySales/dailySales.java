@@ -26,11 +26,11 @@ public class dailySales {
                 "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/"
                 + "searchDailyBoxOfficeList.json"
                 + "?key=b468420905744f639536c8d12b730291"
-                + "&targetDt=20150101");
+                + "&targetDt=20221018");
             reader = new BufferedInputStream(url.openStream());
             StringBuffer buffer = new StringBuffer();
             int i;
-            byte[] b =new byte[8192];
+            byte[] b = new byte[8192];
             while( (i= reader.read(b)) != -1) {
                 buffer.append(new String(b, 0, i));
             }
