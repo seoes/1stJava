@@ -1,17 +1,26 @@
-package seospringtest.seotest.controller;
+package movieweb.webapp.controller;
 
-import javax.sound.sampled.DataLine;
+import lombok.RequiredArgsConstructor;
 
-import org.springframework.stereotype.Controller;
+import movieweb.webapp.model.dto.User;
+import movieweb.webapp.service.TestService;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import seospringtest.dailySales.*;
 
-@Controller
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
+
+@RequiredArgsConstructor
+@RestController
 public class SeoTestController {
+    @Value("${java.file.test}")
+    String envValue;
     @GetMapping("detail")
     public String detail(@RequestParam(value = "name", required = false) String name, Model model) {
         model.addAttribute("data", name); //data: "yo" 값
@@ -33,6 +42,14 @@ public class SeoTestController {
         return hello;
     }
 
+    @GetMapping("helloworld")
+    @ResponseBody
+    public String Helloworld() {
+
+        return envValue;
+    }
+
+
     static class Hello {
         private String name;
 
@@ -44,6 +61,16 @@ public class SeoTestController {
             this.name = name;
         }
     }
+
+
+    private final TestService testService;
+    @GetMapping("test")
+    @ResponseBody
+    public List<User> test() {
+        System.out.println(testService.getAllDataList());
+        return testService.getAllDataList();
+    }
+
 
     // @PostMapping("detail")
     // public String detail(Model model) {

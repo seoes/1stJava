@@ -1,4 +1,4 @@
-package seospringtest.dailySales;
+package movieweb.dailySales;
 
 import java.io.BufferedInputStream;
 import java.net.URL;
