@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface UserMapper {
-    List<User> getAllDataList();
+    List<User> getSomething();
 }

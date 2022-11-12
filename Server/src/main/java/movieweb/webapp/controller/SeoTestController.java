@@ -6,6 +6,7 @@ import movieweb.webapp.model.dto.User;
 import movieweb.webapp.service.TestService;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +18,7 @@ import java.util.List;
 
 
 @RequiredArgsConstructor
-@RestController
+@Controller
 public class SeoTestController {
     @Value("${java.file.test}")
     String envValue;
@@ -26,6 +27,11 @@ public class SeoTestController {
         model.addAttribute("data", name); //data: "yo" 값
         model.addAttribute("data1", "헬로월드");
         return "detailed"; //hello.html 렌더링하기
+    }
+
+    @GetMapping("main")
+    public String main() {
+        return "main";
     }
 
     @GetMapping("hello-string")
@@ -45,7 +51,6 @@ public class SeoTestController {
     @GetMapping("helloworld")
     @ResponseBody
     public String Helloworld() {
-
         return envValue;
     }
 
