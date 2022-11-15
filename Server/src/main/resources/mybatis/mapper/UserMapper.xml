@@ -5,4 +5,7 @@
     <select id="getSomething" resultType="movieweb.webapp.model.dto.User">
         SELECT * FROM user;
     </select>
+    <select id="findUserByName" resultType="movieweb.webapp.model.dto.User">
+        SELECT * FROM user WHERE userName like '%${name}%'
+    </select>
 </mapper>

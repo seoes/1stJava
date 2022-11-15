@@ -9,5 +9,8 @@ import java.util.List;
 @Repository
 @Mapper
 public interface UserMapper {
-    List<User> getSomething();
+    List<User> getAllUserData();
+    List<User> findUserByName(String name); //ID로 유저 찾기
+
+
 }

@@ -72,9 +72,10 @@ public class SeoTestController {
     @GetMapping("test")
     @ResponseBody
     public List<User> test() {
-        System.out.println(testService.getAllDataList());
         return testService.getAllDataList();
     }
+
+
 
 
     // @PostMapping("detail")

@@ -16,7 +16,12 @@ public class TestServiceImpl implements TestService{
 
     @Override
     public List<User> getAllDataList() {
-        return testMapper.getSomething();
+        return testMapper.getAllUserData();
+    }
+
+    @Override
+    public List<User> findUserByName(String name) {
+        return testMapper.findUserByName(name);
     }
 
 
