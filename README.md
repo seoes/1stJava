@@ -4,9 +4,9 @@
 
 -----------
 
-#### 프로젝트 주제 - 이것저것
+#### 프로젝트 주제 - 영화 SNS 커뮤니티
 
-#### 개발 소스 - JAVA, JAVASCRIPT, HTML, CSS
+#### 개발 소스 - Spring Boot, Kakaomap API, KOBIS API
 #### 개발 기간 - 2022.09 ~ 2022.12
 
 
