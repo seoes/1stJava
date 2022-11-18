@@ -7,11 +7,13 @@ import lombok.NonNull;
 public class User {
     public User() {}
 
-    @NonNull private int userID;
+    @NonNull private String userID;
     @NonNull private String userName;
     @NonNull private String userTel;
+    @NonNull private String userEmail;
     @NonNull private String password;
 
+    private String image;
     private String description;
     private String profile;
 }
