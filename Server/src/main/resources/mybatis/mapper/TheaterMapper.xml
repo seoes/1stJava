@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="movieweb.webapp.model.dao.PostMapper">
-    <select id="getAllPostData" resultType="movieweb.webapp.model.dto.Post">
-        SELECT * FROM post;
+<mapper namespace="movieweb.webapp.model.dao.TheaterMapper">
+    <select id="getAllTheaterData" resultType="movieweb.webapp.model.dto.Theater">
+        SELECT province,
+            city,
+            code,
+            name,
+            screenCount,
+            seatCount,
+            filmCount,
+            count2d,
+            count3d,
+            count4d,
+            countImax,
+            company,
+            openDate,
+            address,
+            phone,
+            url,
+            latitude,
+            longitude
+            FROM theater;
     </select>
-    <select id="getLast10Post" resultType="movieweb.webapp.model.dto.Post">
-        SELECT * FROM post LIMIT (${index}-1)*10, 10;
-    </select>
-    <select id="findPostByUserId" resultType="movieweb.webapp.model.dto.Post">
-        SELECT * FROM post WHERE userID LIKE ${userId};
-    </select>
-    <select id="findPostByTitle" resultType="movieweb.webapp.model.dto.Post">
-        SELECT * FROM post WHERE title LIKE '%${title}%';
-    </select>
+
+    <update id="updateCoords" parameterType="movieweb.webapp.model.dto.Theater">
+        UPDATE theater SET latitude = #{latitude}, longitude = #{longitude} WHERE code = #{code};
+    </update>
 </mapper>
