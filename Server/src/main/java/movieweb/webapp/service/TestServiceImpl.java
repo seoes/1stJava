@@ -12,8 +12,6 @@ import java.util.List;
 public class TestServiceImpl implements TestService{
     private final UserMapper testMapper;
 
-
-
     @Override
     public List<User> getAllDataList() {
         return testMapper.getAllUserData();
