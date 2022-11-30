@@ -75,11 +75,15 @@ public class SeoTestController {
         return testService.getAllDataList();
     }
 
+/*
+    */
+/* 게시판 controller 구성 *//*
 
+    @GetMapping("list")
+    public String list() { return "list"; }
 
+    @GetMapping("post")
+    public String post() { return "post"; }
+*/
 
-    // @PostMapping("detail")
-    // public String detail(Model model) {
-
-    // }
 }

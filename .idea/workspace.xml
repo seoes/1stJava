@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94c98ae9-6e21-44ef-ab15-cfcf69d28cce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/entity/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/repository/BoardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/dto/BoardDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/ board/board.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/SeoTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/SeoTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +72,30 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
@@ -80,11 +108,11 @@
   </component>
   <component name="ProjectId" id="2FMvcjLtR67IeN1sXBmCz1LgZh5" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "/Users/hyerimpoong/Desktop/1stJava",
@@ -93,6 +121,15 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/Server/src/main/resources/templates/ board" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.Server [bootRun]">
     <configuration name="Server [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>

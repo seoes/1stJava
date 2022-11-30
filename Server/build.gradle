@@ -8,6 +8,12 @@ group = 'seo-spring-test'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
 repositories {
 	mavenCentral()
 }
@@ -26,8 +32,6 @@ dependencies {
 	//json 파싱을 위한 gson
 	implementation 'com.google.code.gson:gson:2.10'
 
-
-
 	// mybatis와 관련된 dependency (jdbc, mybatis)
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
@@ -36,6 +40,7 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	annotationProcessor 'org.projectlombok:lombok'
 
+	runtimeOnly 'org.webjars:bootstrap:4.5.0'
 }
 
 tasks.named('test') {

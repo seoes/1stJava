@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mysite</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="/static/css/board.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <h1>MySite</h1>
+        <ul>
+            <li><a href="#">로그인</a><li>
+            <li><a href="#">회원가입</a>    <li>
+            <li><a href="#">회원정보수정</a><li>
+            <li><a href="#">로그아웃</a><li>
+            <li>jh님 안녕하세요 ^^;</li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="board">
+            <form id="search_form" action="#" method="get">
+                <input type="text" id="keyword" name="keyword" value="검색어를 입력해주세요.">
+                <input type="hidden" id="showBoardNum" name="showBoardNum" value="${showBoardNum}">
+                <input type="submit" value="찾기">
+            </form>
+            <table class="tbl-ex">
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>조회수</th>
+                    <th>작성일</th>
+                    <th>&nbsp;</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td style="text-align:left; padding-left: 20px">
+                        <a href="#">안녕하세요~</a>
+                    </td>
+                    <td>이효리</td>
+                    <td>13</td>
+                    <td>2019-11-11</td>
+                    <td><a href="#" class="del">삭제</a></td>
+                </tr>
+
+            </table>
+
+            <!-- pager 추가 -->
+            <div class="pager">
+                <ul>
+                    <li><a href="#">◀</a></li>
+                    <li class="selected">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li><a href="#">▶</a></li>
+                </ul>
+            </div>
+
+            <div class="bottom">
+                <a href="#" id="new-book">글쓰기</a>
+            </div>
+        </div>
+    </div>
+    <div id="navigation">
+        <ul>
+            <li><a href="#">jh</a></li>
+            <li><a href="#">방명록</a></li>
+            <li><a href="#">게시판</a></li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>(c)opyright 2015, 2016, 2017, 2018</p>
+    </div>
+</div>
+</body>
+</html>
