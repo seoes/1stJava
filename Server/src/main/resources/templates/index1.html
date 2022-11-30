@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API 테스트</h1>
+
+    <div>
+        <h3>이름으로 사람 찾기</h3>
+        <form id="form-test" action="/getUser" method="GET">
+            <input name="name" type="text"/>
+            <button type="submit">검색</button>
+        </form>
+    </div>
+    <div id="div-result">
+
+    </div>
+
+
+    <h2>다른 HTML 페이지도 살펴보기</h2>
+    <div>
+        <a href=""></a>
+    </div>
+    <div>
+        <a href="/test">test페이지</a>
+    </div>
+    <div>
+        <a href="/helloworld">helloworld (환경변수 출력)페이지</a>
+    </div>
+    <div>
+        <a href="/main">가장 중요한 메인페이지</a>
+    </div>
+</body>
+<script>
+    const btnTest = document.querySelector("#button-test");
+    const formTest = document.querySelector("#form-test");
+    const divResult = document.querySelector("#div-result");
+
+    formTest.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log(formTest.name.value)
+        const url = "/getUser?name=" + formTest.name.value;
+        fetch(url)
+        .then(res => res.json())
+        .then(result => {
+            console.log(result);
+            Object.entries(result[0]).forEach((data) => {
+                const text = document.createElement("h4");
+                text.innerText = `${data[0]} - ${data[1]}`
+                divResult.appendChild(text);
+            })
+        })
+        .catch(error => console.error(error));
+    })
+</script>
+</html>
