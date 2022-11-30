@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94c98ae9-6e21-44ef-ab15-cfcf69d28cce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/entity/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/repository/BoardRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/dto/BoardDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/ board/board.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/common/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/SeoTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/SeoTestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +105,8 @@
     "last_opened_file_path": "/Users/hyerimpoong/Desktop/1stJava",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
 }]]></component>
   <component name="RecentsManager">
