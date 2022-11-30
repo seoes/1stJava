@@ -54,7 +54,8 @@ public class SeoTestController {
     public String Helloworld() {
         return envValue;
     }
-
+    @GetMapping("register")
+    public String Register() { return "register"; }
 
     static class Hello {
         private String name;

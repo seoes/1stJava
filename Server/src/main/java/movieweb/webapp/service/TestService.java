@@ -1,5 +1,6 @@
 package movieweb.webapp.service;
 
+import movieweb.webapp.model.dao.UserMapper;
 import movieweb.webapp.model.dto.User;
 
 import java.util.List;
