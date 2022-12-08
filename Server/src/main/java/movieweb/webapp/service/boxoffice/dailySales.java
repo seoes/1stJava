@@ -51,7 +51,7 @@ public class dailySales implements RankSales{
             while( (i= reader.read(b)) != -1) {
                 buffer.append(new String(b, 0, i));
             }
-            // System.out.println(buffer.toString());
+             System.out.println(buffer.toString());
             return buffer.toString();
         }
         finally {
@@ -60,15 +60,15 @@ public class dailySales implements RankSales{
             }
         }
     }
-    // public static void main(String[] args) {
-    //     try {
-    //         System.out.println("go");
-    //         new dailySales();
-    //         System.out.println("done");
-    //     }
-    //     catch (Exception e) {
-    //         e.printStackTrace();
-    //         System.out.println("fail");
-    //     }
-    // }
+     public static void main(String[] args) {
+         try {
+             System.out.println("go");
+             new dailySales();
+             System.out.println("done");
+         }
+         catch (Exception e) {
+             e.printStackTrace();
+             System.out.println("fail");
+         }
+     }
 }

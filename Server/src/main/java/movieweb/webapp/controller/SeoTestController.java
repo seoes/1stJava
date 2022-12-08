@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import movieweb.webapp.model.dto.User;
 import movieweb.webapp.service.TestService;
 
+import movieweb.webapp.service.TestServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,7 +54,8 @@ public class SeoTestController {
     public String Helloworld() {
         return envValue;
     }
-
+    @GetMapping("register")
+    public String Register() { return "register"; }
 
     static class Hello {
         private String name;

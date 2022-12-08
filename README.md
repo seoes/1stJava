@@ -16,3 +16,17 @@
 ###### 풍혜림(2019020028) - poonghrdd@gmail.com
 ###### 이영진(2021041016) - yurica0615@gmail.com
 ###### 서도원(2019038094) - dsa3182@gmail.com
+
+
+
+#### Svelte 최초 설정법
+
+###### cd ./Server/src/Svelte <- Svelte 폴더 경로로 이동
+###### npm install <- Svelte 사용에 필요한 Node 모듈 설치
+
+
+
+#### Svelte 실행법
+
+###### cd ./Server/src/Svelte <- Svelte 폴더 경로로 이동
+###### npm run dev <- Svelte 실행

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="movieweb.webapp.model.dao.TheaterMapper">
+    <select id="getAllTheaterData" resultType="movieweb.webapp.model.dto.Theater">
+        SELECT province,
+            city,
+            code,
+            name,
+            screenCount,
+            seatCount,
+            filmCount,
+            count2d,
+            count3d,
+            count4d,
+            countImax,
+            company,
+            openDate,
+            address,
+            phone,
+            url,
+            latitude,
+            longitude
+            FROM theater;
+    </select>
+
+    <update id="updateCoords" parameterType="movieweb.webapp.model.dto.Theater">
+        UPDATE theater SET latitude = #{latitude}, longitude = #{longitude} WHERE code = #{code};
+    </update>
+</mapper>

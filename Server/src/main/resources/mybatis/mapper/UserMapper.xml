@@ -2,10 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="movieweb.webapp.model.dao.UserMapper">
-    <select id="getSomething" resultType="movieweb.webapp.model.dto.User">
+    <select id="getAllUserData" resultType="movieweb.webapp.model.dto.User">
         SELECT * FROM user;
     </select>
     <select id="findUserByName" resultType="movieweb.webapp.model.dto.User">
         SELECT * FROM user WHERE userName like '%${name}%'
     </select>
+    <!-- 아아디 중복 확인 -->
+    <select id="getId" parameterType="movieweb.webapp.model.dto.User" resultType="java.lang.Integer">
+        SELECT IFNULL(COUNT(*), 0) FROM MEMBERS
+        WHERE ID = #{id}
+    </select>
+
+    <!-- 회원 가입 -->
+    <insert id="addMember" parameterType="movieweb.webapp.model.dto.User">
+        INSERT INTO User(userID, userName, userTel, password)
+        VALUES (#{userID}, #{userName}, #{userTel}, #{password}, 3)
+    </insert>
+
+    <!-- 로그인 -->
+    <select id="login" parameterType="movieweb.webapp.model.dto.User" resultType="movieweb.webapp.model.dto.User">
+        SELECT userID, userName, userTel, password FROM User
+        WHERE userID = #{userID} AND password = #{password}
+    </select>
+
 </mapper>

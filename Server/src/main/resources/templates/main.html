@@ -6,13 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
-<link href='https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+    <link href='https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css' rel='stylesheet' type='text/css'>
 
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            let y = new Date();
+            y.setDate(y.getDate()-1);
+            let str = y.getFullYear() + "-"
+                + ("0" + (y.getMonth() + 1)).slice(-2) + "-"
+                + ("0" + y.getDate()).slice(-2);
+            $("#date").attr("max",str);
+
+            // 버튼 클릭 이벤트
+            $("#mybtn").click(function() {
+                let d = $("#date").val(); //YYYY-MM-DD
+                const regex = /-/g;
+                let d_str = d.replace(regex,"") // YYYYMMDD
+
+                let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=a8285e93378ce5754e74c4b3c7f42aa8&targetDt="+d_str
+
+                $.getJSON(url, function(data) {
+                    let movieList = data.boxOfficeResult.dailyBoxOfficeList;
+                    $("div").empty();
+
+                    for(let i in movieList){
+                        $("div").append("<span id= '"+movieList[i].movieCd + "'>" +(parseInt(i)+1) + " " + movieList[i].movieNm+"/"+movieList[i].audiAcc + "명 " + "</span><hr>" );
+                        if (i==2)
+                            break;
+                    }
+                });
+            });//click
+        });//ready
+    </script>
 </head>
+
 <style>
     body {
         background-color: whitesmoke;
@@ -33,247 +65,252 @@
     }
 </style>
 <body>
-    <div style="background-color:#282828; height:64px">
-        <h2 style="color:#FFFFFF">My Cinema</h2>
-    </div>
-    <section>
+<div style="background-color:#282828; height:64px">
+    <h2 style="color:#FFFFFF">My Cinema</h2>
+</div>
+<section>
 
-    </section>
-    <div uk-grid class="uk-grid-collapse">
-        <div class="uk-width-medium@m uk-width-1-1 uk-padding-small" >
-            <div class="uk-width-1-1 uk-card uk-card-default" uk-sticky="offset: 20; media: @m">
-                <div>
-                    프로필사진, 닉네임, 마이페이지 링크
-                </div>
-                <ul class="uk-nav-default uk-padding-small" uk-nav>
-                    <li class="uk-active"><a href="#">예시</a></li>
-                    <li class="uk-parent">
-                        <a href="#">게시판<span uk-nav-parent-icon></span></a>
-                        <ul class="uk-nav-sub">
-                            <li><a href="#">리뷰 게시판..?</a></li>
-                            <li><a href="#">자유 게시판???</a></li>
-                        </ul>
-                    </li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-nav-header">기능들~_~</li>
-                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span>실시간 박스오피스 보기</a></li>
-                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>근처 영화관 찾기</a></li>
-                    <!-- <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li> -->
-                </ul>
+</section>
+<div uk-grid class="uk-grid-collapse">
+    <div class="uk-width-medium@m uk-width-1-1 uk-padding-small" >
+        <div class="uk-width-1-1 uk-card uk-card-default" uk-sticky="offset: 20; media: @m">
+            <div>
+                프로필사진, 닉네임, 마이페이지 링크
             </div>
-        </div>
-        
-        <div class="uk-width-1-1 uk-width-expand@s uk-padding-small">
-            <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-2@m" uk-grid>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
-                        <h4>일간 박스오피스</h4>
-                    </div>
-                </div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
-                        <h4>주간 박스오피스</h4>
-                    </div>
-                </div>
-            </div>
-            <p>안녕하세요 영화 SNS입니다 감사합니다</p>
-            <p></p>
-            <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-grid="masonry: true">
-                <div class="uk-animation-toggle" tabindex="0">
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-budapest.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">그랜드 부다페스트 호텔</h5>
-                                <dd class="movie-year">2017년 개봉</dd>
-                                <dd class="movie-comment">영상미 엄청남</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-park.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">헤어질 결심</h5>
-                                <dd class="movie-year">2022년 개봉</dd>
-                                <dd class="movie-comment">칸 영화제 감독상</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-sundown.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">썬다운</h5>
-                                <dd class="movie-year">2022년 개봉</dd>
-                                <dd class="movie-comment">미셸 프랑코 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-psycho.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">아메리칸 사이코</h5>
-                                <dd class="movie-year">2002년 개봉</dd>
-                                <dd class="movie-comment">크리스찬 베일 주연</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-mcbeth.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">레이디 맥베스</h5>
-                                <dd class="movie-year">2017년 개봉</dd>
-                                <dd class="movie-comment">플로렌스 퓨 주연</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-silverlake.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl  class="uk-description-list">
-                                <h5 class="movie-title">언더 더 실버레이크</h5>
-                                <dd class="movie-year">2019년 개봉</dd>
-                                <dd class="movie-comment">앤드류 가필드 주연</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 150px">구글광고삽입 ㅎㅎ</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-paris.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">미드나잇 인 파리스</h5>
-                                <dd class="movie-year">2011년 개봉</dd>
-                                <dd class="movie-comment">우디 앨런 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-dune.jpeg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">듄</h5>
-                                <dd class="movie-year">2021년 개봉</dd>
-                                <dd class="movie-comment">드니 빌뇌브 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-midsommar.jpg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">미드소마</h5>
-                                <dd class="movie-year">2019년 개봉</dd>
-                                <dd class="movie-comment">아리 애스터 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-starisborn.jpg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">스타 이즈 본</h5>
-                                <dd class="movie-year">2019년 개봉</dd>
-                                <dd class="movie-comment">브래들리 쿠퍼 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/sample-goodtime.jpg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">굿타임</h5>
-                                <dd class="movie-year">2018년 개봉</dd>
-                                <dd class="movie-comment">사프디 형제 감독</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default movie-card">
-                        <div>
-                            <img class="movie-img" src="img/rainbow01.jpg" style="width: 100%">
-                        </div>
-                        <div class="uk-card-body">
-                            <dl class="uk-description-list">
-                                <h5 class="movie-title">그냥 무지개 사진</h5>
-                                <dd class="movie-year">아무 사진이나</dd>
-                                <dd class="movie-comment">자동 색깔 적용됨</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 160px">Item</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 180px">Item</div>
-                </div>
-                <div>
-                    <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="uk-width-medium@l"> -->
-
+            <ul class="uk-nav-default uk-padding-small" uk-nav>
+                <li class="uk-active"><a href="#">예시</a></li>
+                <li class="uk-parent">
+                    <a href="#">게시판<span uk-nav-parent-icon></span></a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="#">리뷰 게시판..?</a></li>
+                        <li><a href="#">자유 게시판???</a></li>
+                    </ul>
+                </li>
+                <li class="uk-nav-divider"></li>
+                <li class="uk-nav-header">기능들~_~</li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span>실시간 박스오피스 보기</a></li>
+                <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span>근처 영화관 찾기</a></li>
+                <!-- <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li> -->
+            </ul>
         </div>
     </div>
+
+    <div class="uk-width-1-1 uk-width-expand@s uk-padding-small">
+        <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-2@m" uk-grid>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body">
+                    <h4>일간 박스오피스</h4>
+                    <input type="date" id="date"><button id="mybtn">확인</button>
+                    <div id="boxoffice">
+                        박스 오피스 순위<br>
+                    </div>
+                </div>
+
+            </div>
+            <div class="uk-card uk-card-default">
+                <div class="uk-card-body">
+                    <h4>주간 박스오피스</h4>
+                </div>
+            </div>
+        </div>
+        <p>안녕하세요 영화 SNS입니다 감사합니다</p>
+        <p></p>
+        <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-grid="masonry: true">
+            <div class="uk-animation-toggle" tabindex="0">
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-budapest.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">그랜드 부다페스트 호텔</h5>
+                            <dd class="movie-year">2017년 개봉</dd>
+                            <dd class="movie-comment">영상미 엄청남</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-park.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">헤어질 결심</h5>
+                            <dd class="movie-year">2022년 개봉</dd>
+                            <dd class="movie-comment">칸 영화제 감독상</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-sundown.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">썬다운</h5>
+                            <dd class="movie-year">2022년 개봉</dd>
+                            <dd class="movie-comment">미셸 프랑코 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-psycho.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">아메리칸 사이코</h5>
+                            <dd class="movie-year">2002년 개봉</dd>
+                            <dd class="movie-comment">크리스찬 베일 주연</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-mcbeth.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">레이디 맥베스</h5>
+                            <dd class="movie-year">2017년 개봉</dd>
+                            <dd class="movie-comment">플로렌스 퓨 주연</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-silverlake.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl  class="uk-description-list">
+                            <h5 class="movie-title">언더 더 실버레이크</h5>
+                            <dd class="movie-year">2019년 개봉</dd>
+                            <dd class="movie-comment">앤드류 가필드 주연</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 150px">구글광고삽입 ㅎㅎ</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-paris.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">미드나잇 인 파리스</h5>
+                            <dd class="movie-year">2011년 개봉</dd>
+                            <dd class="movie-comment">우디 앨런 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-dune.jpeg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">듄</h5>
+                            <dd class="movie-year">2021년 개봉</dd>
+                            <dd class="movie-comment">드니 빌뇌브 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-midsommar.jpg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">미드소마</h5>
+                            <dd class="movie-year">2019년 개봉</dd>
+                            <dd class="movie-comment">아리 애스터 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-starisborn.jpg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">스타 이즈 본</h5>
+                            <dd class="movie-year">2019년 개봉</dd>
+                            <dd class="movie-comment">브래들리 쿠퍼 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/sample-goodtime.jpg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">굿타임</h5>
+                            <dd class="movie-year">2018년 개봉</dd>
+                            <dd class="movie-comment">사프디 형제 감독</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default movie-card">
+                    <div>
+                        <img class="movie-img" src="img/rainbow01.jpg" style="width: 100%">
+                    </div>
+                    <div class="uk-card-body">
+                        <dl class="uk-description-list">
+                            <h5 class="movie-title">그냥 무지개 사진</h5>
+                            <dd class="movie-year">아무 사진이나</dd>
+                            <dd class="movie-comment">자동 색깔 적용됨</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 160px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 120px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 200px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 180px">Item</div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 140px">Item</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="uk-width-medium@l"> -->
+
+</div>
+</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 <script src="js/KobisOpenAPIRestService.js"></script>
