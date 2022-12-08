@@ -31,6 +31,9 @@ public class Board {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
+    @Column
+    private Integer likes;
+
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createdDate;
@@ -39,10 +42,11 @@ public class Board {
     private LocalDateTime modifiedDate;
 
     @Builder
-    public Board(Long id, String author, String title, String content) {
+    public Board(Long id, String author, String title, String content, Integer likes) {
         this.id = id;
         this.author = author;
         this.title = title;
         this.content = content;
+        this.likes = likes;
     }
 }

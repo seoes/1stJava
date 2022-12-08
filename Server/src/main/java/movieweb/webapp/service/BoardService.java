@@ -3,7 +3,7 @@ package movieweb.webapp.service;
 
 import movieweb.webapp.domain.entity.Board;
 import movieweb.webapp.domain.repository.BoardRepository;
-import movieweb.webapp.dto.BoardDto;
+import movieweb.webapp.model.dto.BoardDto;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -50,6 +50,7 @@ public class BoardService {
                 .author(board.getAuthor())
                 .title(board.getTitle())
                 .content(board.getContent())
+                .likes(board.getLikes())
                 .createdDate(board.getCreatedDate())
                 .build();
         return boardDto;

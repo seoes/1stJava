@@ -1,6 +1,6 @@
 package movieweb.webapp.controller;
 
-import movieweb.webapp.dto.BoardDto;
+import movieweb.webapp.model.dto.BoardDto;
 import movieweb.webapp.service.BoardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
