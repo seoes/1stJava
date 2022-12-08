@@ -6,6 +6,8 @@
 
 #### 프로젝트 주제 - 영화 SNS 커뮤니티
 
+#### Notion : https://www.notion.so/9d0db7ce62f2402e8f352836a41e099d
+
 #### 개발 소스 - Spring Boot, Kakaomap API, KOBIS API
 #### 개발 기간 - 2022.09 ~ 2022.12
 
