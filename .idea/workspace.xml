@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94c98ae9-6e21-44ef-ab15-cfcf69d28cce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/SeoTestApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/entity/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/domain/entity/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/BoardDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/templates/post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
