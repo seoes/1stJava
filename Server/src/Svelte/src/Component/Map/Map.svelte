@@ -1,16 +1,29 @@
 <script>
+  import { Route } from "tinro";
 import FindMyLocation from "./FindMyLocation.svelte";
 import SearchLocation from "./SearchLocation.svelte";
 import SetMap from "./SetMap.svelte";
 import SetMarker from "./SetMarker.svelte";
-let map;
+import TheaterPopup from "./TheaterPopup.svelte";
 
-    fetch("/movie")
-    .then(res => res.json())
-    .then(result => {
-        //코드
-    })
+let map;
+let selectedTheater = {};
+
+
+    // fetch("/movie")
+    // .then(res => res.json())
+    // .then(result => {
+    //     //코드
+    // })
+    
 </script>
+
+<style>
+    #map {
+        display: flex;
+        height: 400px;
+    }
+</style>
 
 <p>hello</p>
     <div>
@@ -21,8 +34,17 @@ let map;
                 </a>
             </em>
         </p> -->
-        <SetMap bind:map={map}/>
-        <SetMarker bind:map={map}/>
+        <div id="map">
+            <SetMap bind:map={map}/>
+            <SetMarker bind:map={map} bind:selectedTheater={selectedTheater}/>
+        </div>
         <!-- <SearchLocation /> -->
         <FindMyLocation bind:map={map}/>
+        <a href="/theater/detail/123">123가보자</a>
+        <a href="/theater/detail/456">456가보자</a>
+        <Route path='/detail/:_code'>
+            <TheaterPopup bind:selectedTheater={selectedTheater}/>
+        </Route>
+
+        
     </div>

@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94c98ae9-6e21-44ef-ab15-cfcf69d28cce" name="Changes" comment="">
+    <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/MovieMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/MovieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/MovieServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/BoxOffice.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/BoxOffice.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMap.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMap.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/TheaterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/TheaterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/TheaterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/TheaterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/TheaterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/TheaterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/TheaterServiceImple.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/TheaterServiceImple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/TheaterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/TheaterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +84,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -97,18 +121,23 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hyerimpoong/Desktop/1stJava&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Font&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/hyerimpoong/Desktop/1stJava",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Font"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
@@ -118,7 +147,7 @@
       <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Server [bootRun]">
+  <component name="RunManager" selected="Spring Boot.SeoTestApplication">
     <configuration name="Server [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -158,6 +187,13 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="SeoTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="seo-test.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="movieweb.webapp.SeoTestApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
@@ -199,5 +235,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
