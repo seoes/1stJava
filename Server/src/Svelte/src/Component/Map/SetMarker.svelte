@@ -1,14 +1,15 @@
 <script>
-  import { onMount } from "svelte";
+	import { router } from 'tinro';
 
 
     export let map;
+    export let selectedTheater;
 
     const theaters = [];
 
     $: list = [];
 
-    let selectedTheater = {};
+    
 
     let geocoder = new kakao.maps.services.Geocoder();
 
@@ -81,7 +82,7 @@
             })
             kakao.maps.event.addListener(marker, 'click', () => {
                 console.log(theater);
-                selectedTheater = theater;
+                router.goto('/theater/detail/' + theater.code);
             })
             theater.marker = marker;
             theaters.push(theater);
@@ -96,6 +97,8 @@
             const lngMin = bounds.getSouthWest().getLng();
             const latMax = bounds.getNorthEast().getLat();
             const lngMax = bounds.getNorthEast().getLng();
+            const latAvg = (latMin + latMax) / 2;
+            const lngAvg = (lngMin + lngMax) / 2;
             const listTheater = [];
             console.log("map changed")
             theaters.forEach(theater => {
@@ -106,10 +109,21 @@
                     console.log(listTheater);
                 }
             })
-            list = listTheater;
+
+            list = listTheater.sort((a, b) => {
+                return getDistance(a, latAvg, lngAvg) - getDistance(b, latAvg, lngAvg);
+            });
         }
+        setMarkerList();
+        
         
     }
+
+    function getDistance(theater, latMid, lngMid) {
+            const lat = theater.marker.getPosition().getLat();
+            const lng = theater.marker.getPosition().getLng();
+            return ((latMid - lat) ** 2) + ((lngMid - lng) ** 2);
+        }
 
     function setCoords(address, code) {
         geocoder.addressSearch(address, (result, status) => {
@@ -132,6 +146,14 @@
         });
     }
     getTheaterList();
+
+    function handleMouseEnter(event) {
+        event.target.style.backgroundColor = "#eeeeee";
+    }
+
+    function handleMouseOut(event) {
+        event.target.style.backgroundColor = "white";
+    }
 </script>
 
 <style>
@@ -139,20 +161,57 @@
         background-color: aqua;
         color: white;
     }
+    #theaterInfo {
+        width: 400px;
+    }
+
+    #list-theater {
+        background-color: white;
+        height: 400px;
+        overflow-y: scroll;
+        
+    }
+
+    .theater-info-mini {
+        padding: 20px 18px 2px 18px;
+        display: flex;
+    }
+
+    .theater-info-mini h5 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .theater-info-mini p {
+        font-size: smaller;
+    }
 </style>
 
-<div>
-    <div id="selected-theater">
-        <h3>{selectedTheater.name}</h3>
-        <h4>{selectedTheater.address}</h4>
-    </div>
-    {#each list as theater}
+<div id="theaterInfo">
     <div>
-        <h4>{theater.name}</h4>
-        <p>{theater.address}</p>
+        <div id="list-theater">
+            <div on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseOut} class="theater-info-mini">
+                <div>
+                    <h5>메가박스 청주사창</h5>
+                    <p>충청북도 청주시 서원구 내수동로102번길 52-4</p>
+                </div>
+                <div>
+                    <a href="theater/detail/123" class="uk-icon-link" uk-icon="info"></a>
+                </div>
+            </div>
+            {#each list as theater}
+            <div on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseOut} class="theater-info-mini">
+                <div>
+                    <h5>{theater.name}</h5>
+                    <p>{theater.address}</p>
+                </div>
+                <div>
+                    <a href="/theater/detail/{theater.code}" class="uk-icon-link" uk-icon="info"></a>
+                </div>
+            </div>
+            {/each}
+        </div>
     </div>
-    {/each}
-</div>
-<div>
-    <button on:click={() => {getTheaterList()}}>위도 경도 새로 구하기12</button>
+    <div>
+        <button on:click={() => {getTheaterList()}}>위도 경도 새로 구하기12</button>
+    </div>
 </div>

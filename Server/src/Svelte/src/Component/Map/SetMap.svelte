@@ -24,9 +24,7 @@
 
 <style>
     #map-container {
-        border: 2px seashell solid;
         width: 100%;
-        height: 600px;
     }
 </style>
 

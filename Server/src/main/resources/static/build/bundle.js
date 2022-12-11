@@ -2837,27 +2837,27 @@ var app = (function () {
     			strong1.textContent = "내용";
     			t4 = space();
     			textarea = element("textarea");
-    			add_location(strong0, file$5, 4, 61, 77);
+    			add_location(strong0, file$5, 2, 61, 75);
     			attr_dev(label0, "for", "inputAuthor");
     			attr_dev(label0, "class", "col-sm-2 col-form-label");
-    			add_location(label0, file$5, 4, 4, 20);
+    			add_location(label0, file$5, 2, 4, 18);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "name", "author");
     			attr_dev(input, "class", "form-control");
     			attr_dev(input, "id", "inputAuthor");
-    			add_location(input, file$5, 5, 4, 110);
-    			add_location(div0, file$5, 3, 2, 10);
-    			add_location(strong1, file$5, 8, 62, 263);
+    			add_location(input, file$5, 3, 4, 108);
+    			add_location(div0, file$5, 1, 2, 8);
+    			add_location(strong1, file$5, 6, 62, 261);
     			attr_dev(label1, "for", "inputContent");
     			attr_dev(label1, "class", "col-sm-2 col-form-label");
-    			add_location(label1, file$5, 8, 4, 205);
+    			add_location(label1, file$5, 6, 4, 203);
     			attr_dev(textarea, "type", "text");
     			attr_dev(textarea, "name", "content");
     			attr_dev(textarea, "class", "form-control");
     			attr_dev(textarea, "id", "inputContent");
-    			add_location(textarea, file$5, 9, 4, 295);
-    			add_location(div1, file$5, 7, 2, 195);
-    			add_location(div2, file$5, 2, 0, 2);
+    			add_location(textarea, file$5, 7, 4, 293);
+    			add_location(div1, file$5, 5, 2, 193);
+    			add_location(div2, file$5, 0, 0, 0);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
