@@ -189,7 +189,7 @@
 <div id="theaterInfo">
     <div>
         <div id="list-theater">
-            <div on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseOut} class="theater-info-mini">
+            <!-- <div on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseOut} class="theater-info-mini">
                 <div>
                     <h5>메가박스 청주사창</h5>
                     <p>충청북도 청주시 서원구 내수동로102번길 52-4</p>
@@ -197,7 +197,7 @@
                 <div>
                     <a href="theater/detail/123" class="uk-icon-link" uk-icon="info"></a>
                 </div>
-            </div>
+            </div> -->
             {#each list as theater}
             <div on:mouseenter={handleMouseEnter} on:mouseleave={handleMouseOut} class="theater-info-mini">
                 <div>
@@ -211,7 +211,7 @@
             {/each}
         </div>
     </div>
-    <div>
+    <!-- <div>
         <button on:click={() => {getTheaterList()}}>위도 경도 새로 구하기12</button>
-    </div>
+    </div> -->
 </div>

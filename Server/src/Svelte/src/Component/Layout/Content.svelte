@@ -9,11 +9,6 @@
 </script>
 <!-- <SideNav/> -->
 <div style="margin:0 auto;" class="uk-width-1-1 uk-width-5-6@s uk-padding-small">
-    <div>
-        <h3>테스트용</h3>
-        <button><a href="/">페이지 보기</a></button>
-        <button><a href="/theater">지도페이지 보기</a></button>
-    </div>
     <Route path="/">
         <BoxOffice/>
         <MovieCards/>

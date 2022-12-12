@@ -15,7 +15,7 @@
     #header {
         background-color:#FFFFFF;
         color: #000000;
-        height:128px;
+        height:96px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -47,6 +47,7 @@
     #header-menu > * {
         margin: 0 12px 0 12px;
         font-weight: 200;
+        font-size: 14px;
         color: #9c9c9c;
     }
 
@@ -108,8 +109,8 @@
         </div>
     </div>
     <div id="header-menu">
-        <h4><a>영화 탐색</a></h4>
-        <h4><a>영화관 찾기</a></h4>
+        <h4><a href="/">영화 탐색</a></h4>
+        <h4><a href="/theater">영화관 찾기</a></h4>
         <h4>Login</h4>
         <h4>Register</h4>
     </div>

@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -955,6 +955,127 @@ var app = (function () {
     }
 
     // (1:0) <script>     import { onMount }
+    function create_catch_block_1(ctx) {
+    	const block = { c: noop, m: noop, p: noop, d: noop };
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_catch_block_1.name,
+    		type: "catch",
+    		source: "(1:0) <script>     import { onMount }",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (134:8) {:then ranks}
+    function create_then_block$1(ctx) {
+    	let div1;
+    	let div0;
+    	let ul;
+    	let t0;
+    	let a0;
+    	let t1;
+    	let a1;
+    	let each_value = /*ranks*/ ctx[0];
+    	validate_each_argument(each_value);
+    	let each_blocks = [];
+
+    	for (let i = 0; i < each_value.length; i += 1) {
+    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+    	}
+
+    	const block = {
+    		c: function create() {
+    			div1 = element("div");
+    			div0 = element("div");
+    			ul = element("ul");
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].c();
+    			}
+
+    			t0 = space();
+    			a0 = element("a");
+    			t1 = space();
+    			a1 = element("a");
+    			attr_dev(ul, "class", "uk-slider-items uk-child-width-1-4 uk-grid");
+    			add_location(ul, file$c, 136, 16, 3296);
+    			attr_dev(a0, "class", "uk-position-center-left uk-position-small uk-hidden-hover");
+    			attr_dev(a0, "href", "#");
+    			attr_dev(a0, "uk-slidenav-previous", "");
+    			attr_dev(a0, "uk-slider-item", "previous");
+    			add_location(a0, file$c, 157, 16, 4394);
+    			attr_dev(a1, "class", "uk-position-center-right uk-position-small uk-hidden-hover");
+    			attr_dev(a1, "href", "#");
+    			attr_dev(a1, "uk-slidenav-next", "");
+    			attr_dev(a1, "uk-slider-item", "next");
+    			add_location(a1, file$c, 158, 16, 4540);
+    			attr_dev(div0, "id", "card-boxoffice");
+    			attr_dev(div0, "class", "card-body svelte-11z3qwi");
+    			attr_dev(div0, "uk-slider", "");
+    			add_location(div0, file$c, 135, 12, 3227);
+    			attr_dev(div1, "class", "uk-card uk-card-default");
+    			add_location(div1, file$c, 134, 8, 3177);
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, ul);
+
+    			for (let i = 0; i < each_blocks.length; i += 1) {
+    				each_blocks[i].m(ul, null);
+    			}
+
+    			append_dev(div0, t0);
+    			append_dev(div0, a0);
+    			append_dev(div0, t1);
+    			append_dev(div0, a1);
+    		},
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*ranks*/ 1) {
+    				each_value = /*ranks*/ ctx[0];
+    				validate_each_argument(each_value);
+    				let i;
+
+    				for (i = 0; i < each_value.length; i += 1) {
+    					const child_ctx = get_each_context$2(ctx, each_value, i);
+
+    					if (each_blocks[i]) {
+    						each_blocks[i].p(child_ctx, dirty);
+    					} else {
+    						each_blocks[i] = create_each_block$2(child_ctx);
+    						each_blocks[i].c();
+    						each_blocks[i].m(ul, null);
+    					}
+    				}
+
+    				for (; i < each_blocks.length; i += 1) {
+    					each_blocks[i].d(1);
+    				}
+
+    				each_blocks.length = each_value.length;
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(div1);
+    			destroy_each(each_blocks, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block$1.name,
+    		type: "then",
+    		source: "(134:8) {:then ranks}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (1:0) <script>     import { onMount }
     function create_catch_block$1(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -969,95 +1090,33 @@ var app = (function () {
     	return block;
     }
 
-    // (142:20) {:then ranks}
-    function create_then_block$1(ctx) {
-    	let each_1_anchor;
-    	let each_value = /*ranks*/ ctx[0].result.Data[0].Result[0];
-    	validate_each_argument(each_value);
-    	let each_blocks = [];
-
-    	for (let i = 0; i < each_value.length; i += 1) {
-    		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
-    	}
-
-    	const block = {
-    		c: function create() {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].c();
-    			}
-
-    			each_1_anchor = empty();
-    		},
-    		m: function mount(target, anchor) {
-    			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(target, anchor);
-    			}
-
-    			insert_dev(target, each_1_anchor, anchor);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*ranks*/ 1) {
-    				each_value = /*ranks*/ ctx[0].result.Data[0].Result[0];
-    				validate_each_argument(each_value);
-    				let i;
-
-    				for (i = 0; i < each_value.length; i += 1) {
-    					const child_ctx = get_each_context$2(ctx, each_value, i);
-
-    					if (each_blocks[i]) {
-    						each_blocks[i].p(child_ctx, dirty);
-    					} else {
-    						each_blocks[i] = create_each_block$2(child_ctx);
-    						each_blocks[i].c();
-    						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
-    					}
-    				}
-
-    				for (; i < each_blocks.length; i += 1) {
-    					each_blocks[i].d(1);
-    				}
-
-    				each_blocks.length = each_value.length;
-    			}
-    		},
-    		d: function destroy(detaching) {
-    			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(each_1_anchor);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_then_block$1.name,
-    		type: "then",
-    		source: "(142:20) {:then ranks}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (144:20) {#each ranks.result.Data[0].Result[0] as movie, index}
-    function create_each_block$2(ctx) {
+    // (140:20) {:then movie}
+    function create_then_block_1(ctx) {
     	let li;
     	let div2;
     	let div0;
     	let span;
+    	let t0_value = /*index*/ ctx[6] + 1 + "";
     	let t0;
     	let t1;
+    	let img;
+    	let img_src_value;
+    	let t2;
     	let div1;
     	let h4;
-    	let t2_value = /*movie*/ ctx[4].title + "";
-    	let t2;
+    	let t3_value = /*movie*/ ctx[4].Data[0].Result[0].title.replace(/!HS | !HE/g, "") + "";
     	let t3;
-    	let h5;
-    	let t4_value = /*movie*/ ctx[4].actors.actor[0].actorNm + "";
     	let t4;
+    	let h50;
+    	let t5_value = /*movie*/ ctx[4].Data[0].Result[0].actors.actor[0].actorNm + "";
     	let t5;
-    	let t6_value = /*movie*/ ctx[4].actors.actor[1].actorNm + "";
     	let t6;
     	let t7;
+    	let h51;
+    	let t8_value = /*movie*/ ctx[4].Data[0].Result[0].actors.actor[0].actorNm + "";
     	let t8;
+    	let t9;
+    	let t10;
 
     	const block = {
     		c: function create() {
@@ -1065,31 +1124,41 @@ var app = (function () {
     			div2 = element("div");
     			div0 = element("div");
     			span = element("span");
-    			t0 = text(/*index*/ ctx[6]);
+    			t0 = text(t0_value);
     			t1 = space();
+    			img = element("img");
+    			t2 = space();
     			div1 = element("div");
     			h4 = element("h4");
-    			t2 = text(t2_value);
-    			t3 = space();
-    			h5 = element("h5");
-    			t4 = text(t4_value);
-    			t5 = text(", ");
-    			t6 = text(t6_value);
-    			t7 = text(" 주연");
-    			t8 = space();
+    			t3 = text(t3_value);
+    			t4 = space();
+    			h50 = element("h5");
+    			t5 = text(t5_value);
+    			t6 = text(" 주연");
+    			t7 = space();
+    			h51 = element("h5");
+    			t8 = text(t8_value);
+    			t9 = text(" 주연");
+    			t10 = space();
     			attr_dev(span, "class", "svelte-11z3qwi");
-    			add_location(span, file$c, 147, 32, 3673);
-    			add_location(div0, file$c, 146, 28, 3635);
+    			add_location(span, file$c, 143, 32, 3610);
+    			if (!src_url_equal(img.src, img_src_value = /*movie*/ ctx[4].Data[0].Result[0].posters.split('|', 1)[0])) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "포스터 불러오기 실패");
+    			attr_dev(img, "class", "svelte-11z3qwi");
+    			add_location(img, file$c, 144, 32, 3665);
+    			add_location(div0, file$c, 142, 28, 3572);
     			attr_dev(h4, "class", "svelte-11z3qwi");
-    			add_location(h4, file$c, 151, 32, 3890);
-    			attr_dev(h5, "class", "svelte-11z3qwi");
-    			add_location(h5, file$c, 152, 32, 3945);
+    			add_location(h4, file$c, 147, 32, 3862);
+    			attr_dev(h50, "class", "svelte-11z3qwi");
+    			add_location(h50, file$c, 148, 32, 3961);
+    			attr_dev(h51, "class", "svelte-11z3qwi");
+    			add_location(h51, file$c, 149, 32, 4055);
     			attr_dev(div1, "id", "movie-info");
     			attr_dev(div1, "class", "svelte-11z3qwi");
-    			add_location(div1, file$c, 150, 28, 3836);
+    			add_location(div1, file$c, 146, 28, 3808);
     			attr_dev(div2, "class", "uk-panel");
-    			add_location(div2, file$c, 145, 24, 3584);
-    			add_location(li, file$c, 144, 20, 3555);
+    			add_location(div2, file$c, 141, 24, 3521);
+    			add_location(li, file$c, 140, 20, 3492);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1097,25 +1166,105 @@ var app = (function () {
     			append_dev(div2, div0);
     			append_dev(div0, span);
     			append_dev(span, t0);
-    			append_dev(div2, t1);
+    			append_dev(div0, t1);
+    			append_dev(div0, img);
+    			append_dev(div2, t2);
     			append_dev(div2, div1);
     			append_dev(div1, h4);
-    			append_dev(h4, t2);
-    			append_dev(div1, t3);
-    			append_dev(div1, h5);
-    			append_dev(h5, t4);
-    			append_dev(h5, t5);
-    			append_dev(h5, t6);
-    			append_dev(h5, t7);
-    			append_dev(li, t8);
+    			append_dev(h4, t3);
+    			append_dev(div1, t4);
+    			append_dev(div1, h50);
+    			append_dev(h50, t5);
+    			append_dev(h50, t6);
+    			append_dev(div1, t7);
+    			append_dev(div1, h51);
+    			append_dev(h51, t8);
+    			append_dev(h51, t9);
+    			insert_dev(target, t10, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*ranks*/ 1 && t2_value !== (t2_value = /*movie*/ ctx[4].title + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*ranks*/ 1 && t4_value !== (t4_value = /*movie*/ ctx[4].actors.actor[0].actorNm + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*ranks*/ 1 && t6_value !== (t6_value = /*movie*/ ctx[4].actors.actor[1].actorNm + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*ranks*/ 1 && !src_url_equal(img.src, img_src_value = /*movie*/ ctx[4].Data[0].Result[0].posters.split('|', 1)[0])) {
+    				attr_dev(img, "src", img_src_value);
+    			}
+
+    			if (dirty & /*ranks*/ 1 && t3_value !== (t3_value = /*movie*/ ctx[4].Data[0].Result[0].title.replace(/!HS | !HE/g, "") + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*ranks*/ 1 && t5_value !== (t5_value = /*movie*/ ctx[4].Data[0].Result[0].actors.actor[0].actorNm + "")) set_data_dev(t5, t5_value);
+    			if (dirty & /*ranks*/ 1 && t8_value !== (t8_value = /*movie*/ ctx[4].Data[0].Result[0].actors.actor[0].actorNm + "")) set_data_dev(t8, t8_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(li);
+    			if (detaching) detach_dev(t10);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_then_block_1.name,
+    		type: "then",
+    		source: "(140:20) {:then movie}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (139:34)                      {:then movie}
+    function create_pending_block_1(ctx) {
+    	const block = { c: noop, m: noop, p: noop, d: noop };
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_pending_block_1.name,
+    		type: "pending",
+    		source: "(139:34)                      {:then movie}",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (138:20) {#each ranks as movie, index}
+    function create_each_block$2(ctx) {
+    	let await_block_anchor;
+    	let promise;
+
+    	let info = {
+    		ctx,
+    		current: null,
+    		token: null,
+    		hasCatch: false,
+    		pending: create_pending_block_1,
+    		then: create_then_block_1,
+    		catch: create_catch_block$1,
+    		value: 4
+    	};
+
+    	handle_promise(promise = /*movie*/ ctx[4], info);
+
+    	const block = {
+    		c: function create() {
+    			await_block_anchor = empty();
+    			info.block.c();
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, await_block_anchor, anchor);
+    			info.block.m(target, info.anchor = anchor);
+    			info.mount = () => await_block_anchor.parentNode;
+    			info.anchor = await_block_anchor;
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			info.ctx = ctx;
+
+    			if (dirty & /*ranks*/ 1 && promise !== (promise = /*movie*/ ctx[4]) && handle_promise(promise, info)) ; else {
+    				update_await_block_branch(info, ctx, dirty);
+    			}
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(await_block_anchor);
+    			info.block.d(detaching);
+    			info.token = null;
+    			info = null;
     		}
     	};
 
@@ -1123,14 +1272,14 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(144:20) {#each ranks.result.Data[0].Result[0] as movie, index}",
+    		source: "(138:20) {#each ranks as movie, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:34)                                               {:then ranks}
+    // (133:22)          {:then ranks}
     function create_pending_block$1(ctx) {
     	const block = { c: noop, m: noop, p: noop, d: noop };
 
@@ -1138,7 +1287,7 @@ var app = (function () {
     		block,
     		id: create_pending_block$1.name,
     		type: "pending",
-    		source: "(140:34)                                               {:then ranks}",
+    		source: "(133:22)          {:then ranks}",
     		ctx
     	});
 
@@ -1146,24 +1295,17 @@ var app = (function () {
     }
 
     function create_fragment$e(ctx) {
-    	let div4;
+    	let div2;
     	let div0;
     	let button0;
     	let t1;
     	let button1;
     	let t3;
-    	let div3;
-    	let div2;
     	let div1;
-    	let ul;
     	let promise;
     	let t4;
-    	let a0;
-    	let t5;
-    	let a1;
-    	let t6;
     	let p0;
-    	let t8;
+    	let t6;
     	let p1;
     	let mounted;
     	let dispose;
@@ -1175,7 +1317,7 @@ var app = (function () {
     		hasCatch: false,
     		pending: create_pending_block$1,
     		then: create_then_block$1,
-    		catch: create_catch_block$1,
+    		catch: create_catch_block_1,
     		value: 0
     	};
 
@@ -1183,7 +1325,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div2 = element("div");
     			div0 = element("div");
     			button0 = element("button");
     			button0.textContent = "일간박스오피스";
@@ -1191,72 +1333,40 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "주간박스오피스";
     			t3 = space();
-    			div3 = element("div");
-    			div2 = element("div");
     			div1 = element("div");
-    			ul = element("ul");
     			info.block.c();
     			t4 = space();
-    			a0 = element("a");
-    			t5 = space();
-    			a1 = element("a");
-    			t6 = space();
     			p0 = element("p");
     			p0.textContent = "안녕하세요 영화 SNS입니다 감사합니다";
-    			t8 = space();
+    			t6 = space();
     			p1 = element("p");
-    			add_location(button0, file$c, 132, 8, 2979);
-    			add_location(button1, file$c, 133, 8, 3061);
-    			add_location(div0, file$c, 131, 4, 2965);
-    			attr_dev(ul, "class", "uk-slider-items uk-child-width-1-4 uk-grid");
-    			add_location(ul, file$c, 138, 16, 3284);
-    			attr_dev(a0, "class", "uk-position-center-left uk-position-small uk-hidden-hover");
-    			attr_dev(a0, "href", "#");
-    			attr_dev(a0, "uk-slidenav-previous", "");
-    			attr_dev(a0, "uk-slider-item", "previous");
-    			add_location(a0, file$c, 160, 16, 4299);
-    			attr_dev(a1, "class", "uk-position-center-right uk-position-small uk-hidden-hover");
-    			attr_dev(a1, "href", "#");
-    			attr_dev(a1, "uk-slidenav-next", "");
-    			attr_dev(a1, "uk-slider-item", "next");
-    			add_location(a1, file$c, 161, 16, 4445);
-    			attr_dev(div1, "id", "card-boxoffice");
-    			attr_dev(div1, "class", "card-body svelte-11z3qwi");
-    			attr_dev(div1, "uk-slider", "");
-    			add_location(div1, file$c, 137, 12, 3215);
-    			attr_dev(div2, "class", "uk-card uk-card-default");
-    			add_location(div2, file$c, 136, 8, 3165);
-    			add_location(div3, file$c, 135, 4, 3151);
-    			attr_dev(div4, "class", "uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-1@m");
-    			attr_dev(div4, "uk-grid", "");
-    			add_location(div4, file$c, 130, 0, 2860);
-    			add_location(p0, file$c, 196, 0, 5531);
-    			add_location(p1, file$c, 197, 0, 5560);
+    			add_location(button0, file$c, 128, 8, 2946);
+    			add_location(button1, file$c, 129, 8, 3028);
+    			add_location(div0, file$c, 127, 4, 2932);
+    			add_location(div1, file$c, 131, 4, 3118);
+    			attr_dev(div2, "class", "uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-1@m");
+    			attr_dev(div2, "uk-grid", "");
+    			add_location(div2, file$c, 126, 0, 2827);
+    			add_location(p0, file$c, 194, 0, 5643);
+    			add_location(p1, file$c, 195, 0, 5672);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div0);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
     			append_dev(div0, button0);
     			append_dev(div0, t1);
     			append_dev(div0, button1);
-    			append_dev(div4, t3);
-    			append_dev(div4, div3);
-    			append_dev(div3, div2);
+    			append_dev(div2, t3);
     			append_dev(div2, div1);
-    			append_dev(div1, ul);
-    			info.block.m(ul, info.anchor = null);
-    			info.mount = () => ul;
+    			info.block.m(div1, info.anchor = null);
+    			info.mount = () => div1;
     			info.anchor = null;
-    			append_dev(div1, t4);
-    			append_dev(div1, a0);
-    			append_dev(div1, t5);
-    			append_dev(div1, a1);
-    			insert_dev(target, t6, anchor);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, p0, anchor);
-    			insert_dev(target, t8, anchor);
+    			insert_dev(target, t6, anchor);
     			insert_dev(target, p1, anchor);
 
     			if (!mounted) {
@@ -1279,13 +1389,13 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(div2);
     			info.block.d();
     			info.token = null;
     			info = null;
-    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(p0);
-    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(t6);
     			if (detaching) detach_dev(p1);
     			mounted = false;
     			run_all(dispose);
@@ -1304,10 +1414,9 @@ var app = (function () {
     }
 
     async function getBoxOffice(range) {
+    	const regex = /[^0-9]/g;
     	const response1 = await fetch("/" + range);
     	const result1 = await response1.json();
-    	console.log(result1);
-    	const regex = /[^0-9]/g;
 
     	const list = await result1.boxOfficeResult.dailyBoxOfficeList.map(async movie => {
     		const response = await fetch(`/searchTitle?title=${movie.movieNm}&releaseDts=${movie.openDt.replace(regex, "")}`);
@@ -2198,7 +2307,7 @@ var app = (function () {
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[17] = list[i];
+    	child_ctx[16] = list[i];
     	return child_ctx;
     }
 
@@ -2207,11 +2316,11 @@ var app = (function () {
     	let div2;
     	let div0;
     	let h5;
-    	let t0_value = /*theater*/ ctx[17].name + "";
+    	let t0_value = /*theater*/ ctx[16].name + "";
     	let t0;
     	let t1;
     	let p;
-    	let t2_value = /*theater*/ ctx[17].address + "";
+    	let t2_value = /*theater*/ ctx[16].address + "";
     	let t2;
     	let t3;
     	let div1;
@@ -2235,17 +2344,17 @@ var app = (function () {
     			a = element("a");
     			t4 = space();
     			attr_dev(h5, "class", "svelte-14218xa");
-    			add_location(h5, file$8, 203, 20, 7032);
+    			add_location(h5, file$8, 203, 20, 7041);
     			attr_dev(p, "class", "svelte-14218xa");
-    			add_location(p, file$8, 204, 20, 7076);
-    			add_location(div0, file$8, 202, 16, 7006);
-    			attr_dev(a, "href", a_href_value = "/theater/detail/" + /*theater*/ ctx[17].code);
+    			add_location(p, file$8, 204, 20, 7085);
+    			add_location(div0, file$8, 202, 16, 7015);
+    			attr_dev(a, "href", a_href_value = "/theater/detail/" + /*theater*/ ctx[16].code);
     			attr_dev(a, "class", "uk-icon-link");
     			attr_dev(a, "uk-icon", "info");
-    			add_location(a, file$8, 207, 20, 7166);
-    			add_location(div1, file$8, 206, 16, 7140);
+    			add_location(a, file$8, 207, 20, 7175);
+    			add_location(div1, file$8, 206, 16, 7149);
     			attr_dev(div2, "class", "theater-info-mini svelte-14218xa");
-    			add_location(div2, file$8, 201, 12, 6894);
+    			add_location(div2, file$8, 201, 12, 6903);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -2270,10 +2379,10 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*list*/ 1 && t0_value !== (t0_value = /*theater*/ ctx[17].name + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*list*/ 1 && t2_value !== (t2_value = /*theater*/ ctx[17].address + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*list*/ 1 && t0_value !== (t0_value = /*theater*/ ctx[16].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*list*/ 1 && t2_value !== (t2_value = /*theater*/ ctx[16].address + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty & /*list*/ 1 && a_href_value !== (a_href_value = "/theater/detail/" + /*theater*/ ctx[17].code)) {
+    			if (dirty & /*list*/ 1 && a_href_value !== (a_href_value = "/theater/detail/" + /*theater*/ ctx[16].code)) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},
@@ -2296,23 +2405,9 @@ var app = (function () {
     }
 
     function create_fragment$9(ctx) {
-    	let div6;
-    	let div4;
-    	let div3;
     	let div2;
-    	let div0;
-    	let h5;
-    	let t1;
-    	let p;
-    	let t3;
     	let div1;
-    	let a;
-    	let t4;
-    	let t5;
-    	let div5;
-    	let button;
-    	let mounted;
-    	let dispose;
+    	let div0;
     	let each_value = /*list*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -2323,84 +2418,32 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div6 = element("div");
-    			div4 = element("div");
-    			div3 = element("div");
     			div2 = element("div");
-    			div0 = element("div");
-    			h5 = element("h5");
-    			h5.textContent = "메가박스 청주사창";
-    			t1 = space();
-    			p = element("p");
-    			p.textContent = "충청북도 청주시 서원구 내수동로102번길 52-4";
-    			t3 = space();
     			div1 = element("div");
-    			a = element("a");
-    			t4 = space();
+    			div0 = element("div");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t5 = space();
-    			div5 = element("div");
-    			button = element("button");
-    			button.textContent = "위도 경도 새로 구하기12";
-    			attr_dev(h5, "class", "svelte-14218xa");
-    			add_location(h5, file$8, 193, 20, 6595);
-    			attr_dev(p, "class", "svelte-14218xa");
-    			add_location(p, file$8, 194, 20, 6634);
-    			add_location(div0, file$8, 192, 16, 6569);
-    			attr_dev(a, "href", "theater/detail/123");
-    			attr_dev(a, "class", "uk-icon-link");
-    			attr_dev(a, "uk-icon", "info");
-    			add_location(a, file$8, 197, 20, 6734);
-    			add_location(div1, file$8, 196, 16, 6708);
-    			attr_dev(div2, "class", "theater-info-mini svelte-14218xa");
-    			add_location(div2, file$8, 191, 12, 6457);
-    			attr_dev(div3, "id", "list-theater");
-    			attr_dev(div3, "class", "svelte-14218xa");
-    			add_location(div3, file$8, 190, 8, 6421);
-    			add_location(div4, file$8, 189, 4, 6407);
-    			add_location(button, file$8, 214, 8, 7354);
-    			add_location(div5, file$8, 213, 4, 7340);
-    			attr_dev(div6, "id", "theaterInfo");
-    			attr_dev(div6, "class", "svelte-14218xa");
-    			add_location(div6, file$8, 188, 0, 6380);
+    			attr_dev(div0, "id", "list-theater");
+    			attr_dev(div0, "class", "svelte-14218xa");
+    			add_location(div0, file$8, 190, 8, 6421);
+    			add_location(div1, file$8, 189, 4, 6407);
+    			attr_dev(div2, "id", "theaterInfo");
+    			attr_dev(div2, "class", "svelte-14218xa");
+    			add_location(div2, file$8, 188, 0, 6380);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div6, anchor);
-    			append_dev(div6, div4);
-    			append_dev(div4, div3);
-    			append_dev(div3, div2);
-    			append_dev(div2, div0);
-    			append_dev(div0, h5);
-    			append_dev(div0, t1);
-    			append_dev(div0, p);
-    			append_dev(div2, t3);
+    			insert_dev(target, div2, anchor);
     			append_dev(div2, div1);
-    			append_dev(div1, a);
-    			append_dev(div3, t4);
+    			append_dev(div1, div0);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div3, null);
-    			}
-
-    			append_dev(div6, t5);
-    			append_dev(div6, div5);
-    			append_dev(div5, button);
-
-    			if (!mounted) {
-    				dispose = [
-    					listen_dev(div2, "mouseenter", handleMouseEnter, false, false, false),
-    					listen_dev(div2, "mouseleave", handleMouseOut, false, false, false),
-    					listen_dev(button, "click", /*click_handler*/ ctx[4], false, false, false)
-    				];
-
-    				mounted = true;
+    				each_blocks[i].m(div0, null);
     			}
     		},
     		p: function update(ctx, [dirty]) {
@@ -2417,7 +2460,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div3, null);
+    						each_blocks[i].m(div0, null);
     					}
     				}
 
@@ -2431,10 +2474,8 @@ var app = (function () {
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div6);
+    			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks, detaching);
-    			mounted = false;
-    			run_all(dispose);
     		}
     	};
 
@@ -2618,13 +2659,9 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<SetMarker> was created with unknown prop '${key}'`);
     	});
 
-    	const click_handler = () => {
-    		getTheaterList();
-    	};
-
     	$$self.$$set = $$props => {
-    		if ('map' in $$props) $$invalidate(2, map = $$props.map);
-    		if ('selectedTheater' in $$props) $$invalidate(3, selectedTheater = $$props.selectedTheater);
+    		if ('map' in $$props) $$invalidate(1, map = $$props.map);
+    		if ('selectedTheater' in $$props) $$invalidate(2, selectedTheater = $$props.selectedTheater);
     	};
 
     	$$self.$capture_state = () => ({
@@ -2651,8 +2688,8 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('map' in $$props) $$invalidate(2, map = $$props.map);
-    		if ('selectedTheater' in $$props) $$invalidate(3, selectedTheater = $$props.selectedTheater);
+    		if ('map' in $$props) $$invalidate(1, map = $$props.map);
+    		if ('selectedTheater' in $$props) $$invalidate(2, selectedTheater = $$props.selectedTheater);
     		if ('geocoder' in $$props) geocoder = $$props.geocoder;
     		if ('markerSize' in $$props) markerSize = $$props.markerSize;
     		if ('markerOption' in $$props) markerOption = $$props.markerOption;
@@ -2670,13 +2707,13 @@ var app = (function () {
     	}
 
     	$$invalidate(0, list = []);
-    	return [list, getTheaterList, map, selectedTheater, click_handler];
+    	return [list, map, selectedTheater];
     }
 
     class SetMarker extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { map: 2, selectedTheater: 3 });
+    		init(this, options, instance$9, create_fragment$9, safe_not_equal, { map: 1, selectedTheater: 2 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3285,14 +3322,14 @@ var app = (function () {
     /* src/Component/Map/Map.svelte generated by Svelte v3.53.1 */
     const file$5 = "src/Component/Map/Map.svelte";
 
-    // (45:8) <Route path='/detail/:_code'>
+    // (42:4) <Route path='/detail/:_code'>
     function create_default_slot$1(ctx) {
     	let theaterpopup;
     	let updating_selectedTheater;
     	let current;
 
     	function theaterpopup_selectedTheater_binding(value) {
-    		/*theaterpopup_selectedTheater_binding*/ ctx[6](value);
+    		/*theaterpopup_selectedTheater_binding*/ ctx[5](value);
     	}
 
     	let theaterpopup_props = {};
@@ -3345,7 +3382,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(45:8) <Route path='/detail/:_code'>",
+    		source: "(42:4) <Route path='/detail/:_code'>",
     		ctx
     	});
 
@@ -3353,24 +3390,15 @@ var app = (function () {
     }
 
     function create_fragment$6(ctx) {
-    	let p;
-    	let t1;
     	let div1;
     	let div0;
     	let setmap;
     	let updating_map;
-    	let t2;
+    	let t0;
     	let setmarker;
     	let updating_map_1;
     	let updating_selectedTheater;
-    	let t3;
-    	let findmylocation;
-    	let updating_map_2;
-    	let t4;
-    	let a0;
-    	let t6;
-    	let a1;
-    	let t8;
+    	let t1;
     	let route;
     	let current;
 
@@ -3409,23 +3437,6 @@ var app = (function () {
     	binding_callbacks.push(() => bind(setmarker, 'map', setmarker_map_binding));
     	binding_callbacks.push(() => bind(setmarker, 'selectedTheater', setmarker_selectedTheater_binding));
 
-    	function findmylocation_map_binding(value) {
-    		/*findmylocation_map_binding*/ ctx[5](value);
-    	}
-
-    	let findmylocation_props = {};
-
-    	if (/*map*/ ctx[0] !== void 0) {
-    		findmylocation_props.map = /*map*/ ctx[0];
-    	}
-
-    	findmylocation = new FindMyLocation({
-    			props: findmylocation_props,
-    			$$inline: true
-    		});
-
-    	binding_callbacks.push(() => bind(findmylocation, 'map', findmylocation_map_binding));
-
     	route = new Route({
     			props: {
     				path: "/detail/:_code",
@@ -3437,52 +3448,28 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			p = element("p");
-    			p.textContent = "hello";
-    			t1 = space();
     			div1 = element("div");
     			div0 = element("div");
     			create_component(setmap.$$.fragment);
-    			t2 = space();
+    			t0 = space();
     			create_component(setmarker.$$.fragment);
-    			t3 = space();
-    			create_component(findmylocation.$$.fragment);
-    			t4 = space();
-    			a0 = element("a");
-    			a0.textContent = "123가보자";
-    			t6 = space();
-    			a1 = element("a");
-    			a1.textContent = "456가보자";
-    			t8 = space();
+    			t1 = space();
     			create_component(route.$$.fragment);
-    			add_location(p, file$5, 27, 0, 523);
     			attr_dev(div0, "id", "map");
     			attr_dev(div0, "class", "svelte-mxkq0e");
-    			add_location(div0, file$5, 36, 8, 886);
-    			attr_dev(a0, "href", "/theater/detail/123");
-    			add_location(a0, file$5, 42, 8, 1117);
-    			attr_dev(a1, "href", "/theater/detail/456");
-    			add_location(a1, file$5, 43, 8, 1166);
-    			add_location(div1, file$5, 28, 4, 540);
+    			add_location(div0, file$5, 35, 4, 837);
+    			add_location(div1, file$5, 27, 0, 523);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
-    			insert_dev(target, t1, anchor);
     			insert_dev(target, div1, anchor);
     			append_dev(div1, div0);
     			mount_component(setmap, div0, null);
-    			append_dev(div0, t2);
+    			append_dev(div0, t0);
     			mount_component(setmarker, div0, null);
-    			append_dev(div1, t3);
-    			mount_component(findmylocation, div1, null);
-    			append_dev(div1, t4);
-    			append_dev(div1, a0);
-    			append_dev(div1, t6);
-    			append_dev(div1, a1);
-    			append_dev(div1, t8);
+    			append_dev(div1, t1);
     			mount_component(route, div1, null);
     			current = true;
     		},
@@ -3511,18 +3498,9 @@ var app = (function () {
     			}
 
     			setmarker.$set(setmarker_changes);
-    			const findmylocation_changes = {};
-
-    			if (!updating_map_2 && dirty & /*map*/ 1) {
-    				updating_map_2 = true;
-    				findmylocation_changes.map = /*map*/ ctx[0];
-    				add_flush_callback(() => updating_map_2 = false);
-    			}
-
-    			findmylocation.$set(findmylocation_changes);
     			const route_changes = {};
 
-    			if (dirty & /*$$scope, selectedTheater*/ 130) {
+    			if (dirty & /*$$scope, selectedTheater*/ 66) {
     				route_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3532,24 +3510,19 @@ var app = (function () {
     			if (current) return;
     			transition_in(setmap.$$.fragment, local);
     			transition_in(setmarker.$$.fragment, local);
-    			transition_in(findmylocation.$$.fragment, local);
     			transition_in(route.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(setmap.$$.fragment, local);
     			transition_out(setmarker.$$.fragment, local);
-    			transition_out(findmylocation.$$.fragment, local);
     			transition_out(route.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
-    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(div1);
     			destroy_component(setmap);
     			destroy_component(setmarker);
-    			destroy_component(findmylocation);
     			destroy_component(route);
     		}
     	};
@@ -3591,11 +3564,6 @@ var app = (function () {
     		$$invalidate(1, selectedTheater);
     	}
 
-    	function findmylocation_map_binding(value) {
-    		map = value;
-    		$$invalidate(0, map);
-    	}
-
     	function theaterpopup_selectedTheater_binding(value) {
     		selectedTheater = value;
     		$$invalidate(1, selectedTheater);
@@ -3627,7 +3595,6 @@ var app = (function () {
     		setmap_map_binding,
     		setmarker_map_binding,
     		setmarker_selectedTheater_binding,
-    		findmylocation_map_binding,
     		theaterpopup_selectedTheater_binding
     	];
     }
@@ -4336,7 +4303,7 @@ var app = (function () {
     /* src/Component/Layout/Content.svelte generated by Svelte v3.53.1 */
     const file$1 = "src/Component/Layout/Content.svelte";
 
-    // (17:4) <Route path="/">
+    // (12:4) <Route path="/">
     function create_default_slot_1(ctx) {
     	let boxoffice;
     	let t;
@@ -4379,14 +4346,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(17:4) <Route path=\\\"/\\\">",
+    		source: "(12:4) <Route path=\\\"/\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (21:4) <Route path="/theater/*">
+    // (16:4) <Route path="/theater/*">
     function create_default_slot(ctx) {
     	let map;
     	let current;
@@ -4418,7 +4385,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(21:4) <Route path=\\\"/theater/*\\\">",
+    		source: "(16:4) <Route path=\\\"/theater/*\\\">",
     		ctx
     	});
 
@@ -4426,18 +4393,9 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let div1;
-    	let div0;
-    	let h3;
-    	let t1;
-    	let button0;
-    	let a0;
-    	let t3;
-    	let button1;
-    	let a1;
-    	let t5;
+    	let div;
     	let route0;
-    	let t6;
+    	let t;
     	let route1;
     	let current;
 
@@ -4461,51 +4419,22 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div1 = element("div");
-    			div0 = element("div");
-    			h3 = element("h3");
-    			h3.textContent = "테스트용";
-    			t1 = space();
-    			button0 = element("button");
-    			a0 = element("a");
-    			a0.textContent = "페이지 보기";
-    			t3 = space();
-    			button1 = element("button");
-    			a1 = element("a");
-    			a1.textContent = "지도페이지 보기";
-    			t5 = space();
+    			div = element("div");
     			create_component(route0.$$.fragment);
-    			t6 = space();
+    			t = space();
     			create_component(route1.$$.fragment);
-    			add_location(h3, file$1, 12, 8, 399);
-    			attr_dev(a0, "href", "/");
-    			add_location(a0, file$1, 13, 16, 429);
-    			add_location(button0, file$1, 13, 8, 421);
-    			attr_dev(a1, "href", "/theater");
-    			add_location(a1, file$1, 14, 16, 477);
-    			add_location(button1, file$1, 14, 8, 469);
-    			add_location(div0, file$1, 11, 4, 385);
-    			set_style(div1, "margin", "0 auto");
-    			attr_dev(div1, "class", "uk-width-1-1 uk-width-5-6@s uk-padding-small");
-    			add_location(div1, file$1, 10, 0, 299);
+    			set_style(div, "margin", "0 auto");
+    			attr_dev(div, "class", "uk-width-1-1 uk-width-5-6@s uk-padding-small");
+    			add_location(div, file$1, 10, 0, 299);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div1, anchor);
-    			append_dev(div1, div0);
-    			append_dev(div0, h3);
-    			append_dev(div0, t1);
-    			append_dev(div0, button0);
-    			append_dev(button0, a0);
-    			append_dev(div0, t3);
-    			append_dev(div0, button1);
-    			append_dev(button1, a1);
-    			append_dev(div1, t5);
-    			mount_component(route0, div1, null);
-    			append_dev(div1, t6);
-    			mount_component(route1, div1, null);
+    			insert_dev(target, div, anchor);
+    			mount_component(route0, div, null);
+    			append_dev(div, t);
+    			mount_component(route1, div, null);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -4536,7 +4465,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div1);
+    			if (detaching) detach_dev(div);
     			destroy_component(route0);
     			destroy_component(route1);
     		}
@@ -4693,51 +4622,53 @@ var app = (function () {
     			if (!src_url_equal(script1.src, script1_src_value = "https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js")) attr_dev(script1, "src", script1_src_value);
     			add_location(script1, file, 10, 4, 398);
     			if (!src_url_equal(img.src, img_src_value = "/img/wwm_logo.png")) attr_dev(img, "src", img_src_value);
-    			attr_dev(img, "class", "svelte-13ddpm4");
-    			add_location(img, file, 96, 8, 1959);
-    			attr_dev(h2, "class", "svelte-13ddpm4");
-    			add_location(h2, file, 98, 12, 2016);
-    			attr_dev(h3, "class", "svelte-13ddpm4");
-    			add_location(h3, file, 99, 12, 2041);
-    			attr_dev(div0, "class", "svelte-13ddpm4");
-    			add_location(div0, file, 97, 8, 1998);
+    			attr_dev(img, "class", "svelte-5u4rpj");
+    			add_location(img, file, 97, 8, 1983);
+    			attr_dev(h2, "class", "svelte-5u4rpj");
+    			add_location(h2, file, 99, 12, 2040);
+    			attr_dev(h3, "class", "svelte-5u4rpj");
+    			add_location(h3, file, 100, 12, 2065);
+    			attr_dev(div0, "class", "svelte-5u4rpj");
+    			add_location(div0, file, 98, 8, 2022);
     			attr_dev(div1, "id", "header-logo");
-    			attr_dev(div1, "class", "svelte-13ddpm4");
-    			add_location(div1, file, 95, 4, 1928);
+    			attr_dev(div1, "class", "svelte-5u4rpj");
+    			add_location(div1, file, 96, 4, 1952);
     			attr_dev(input, "id", "search-input");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "placeholder", "영화 제목 검색");
-    			attr_dev(input, "class", "svelte-13ddpm4");
-    			add_location(input, file, 105, 12, 2157);
+    			attr_dev(input, "class", "svelte-5u4rpj");
+    			add_location(input, file, 106, 12, 2181);
     			attr_dev(span, "uk-icon", "search");
-    			attr_dev(span, "class", "svelte-13ddpm4");
-    			add_location(span, file, 106, 12, 2231);
-    			attr_dev(div2, "class", "svelte-13ddpm4");
-    			add_location(div2, file, 104, 8, 2139);
+    			attr_dev(span, "class", "svelte-5u4rpj");
+    			add_location(span, file, 107, 12, 2255);
+    			attr_dev(div2, "class", "svelte-5u4rpj");
+    			add_location(div2, file, 105, 8, 2163);
     			attr_dev(div3, "id", "header-search");
-    			attr_dev(div3, "class", "svelte-13ddpm4");
-    			add_location(div3, file, 103, 4, 2106);
-    			attr_dev(a0, "class", "svelte-13ddpm4");
-    			add_location(a0, file, 110, 12, 2327);
-    			attr_dev(h40, "class", "svelte-13ddpm4");
-    			add_location(h40, file, 110, 8, 2323);
-    			attr_dev(a1, "class", "svelte-13ddpm4");
-    			add_location(a1, file, 111, 12, 2357);
-    			attr_dev(h41, "class", "svelte-13ddpm4");
-    			add_location(h41, file, 111, 8, 2353);
-    			attr_dev(h42, "class", "svelte-13ddpm4");
-    			add_location(h42, file, 112, 8, 2384);
-    			attr_dev(h43, "class", "svelte-13ddpm4");
-    			add_location(h43, file, 113, 8, 2407);
+    			attr_dev(div3, "class", "svelte-5u4rpj");
+    			add_location(div3, file, 104, 4, 2130);
+    			attr_dev(a0, "href", "/");
+    			attr_dev(a0, "class", "svelte-5u4rpj");
+    			add_location(a0, file, 111, 12, 2351);
+    			attr_dev(h40, "class", "svelte-5u4rpj");
+    			add_location(h40, file, 111, 8, 2347);
+    			attr_dev(a1, "href", "/theater");
+    			attr_dev(a1, "class", "svelte-5u4rpj");
+    			add_location(a1, file, 112, 12, 2390);
+    			attr_dev(h41, "class", "svelte-5u4rpj");
+    			add_location(h41, file, 112, 8, 2386);
+    			attr_dev(h42, "class", "svelte-5u4rpj");
+    			add_location(h42, file, 113, 8, 2433);
+    			attr_dev(h43, "class", "svelte-5u4rpj");
+    			add_location(h43, file, 114, 8, 2456);
     			attr_dev(div4, "id", "header-menu");
-    			attr_dev(div4, "class", "svelte-13ddpm4");
-    			add_location(div4, file, 109, 4, 2292);
+    			attr_dev(div4, "class", "svelte-5u4rpj");
+    			add_location(div4, file, 110, 4, 2316);
     			attr_dev(div5, "id", "header");
-    			attr_dev(div5, "class", "svelte-13ddpm4");
-    			add_location(div5, file, 94, 0, 1906);
+    			attr_dev(div5, "class", "svelte-5u4rpj");
+    			add_location(div5, file, 95, 0, 1930);
     			attr_dev(div6, "uk-grid", "");
     			attr_dev(div6, "class", "uk-grid-collapse");
-    			add_location(div6, file, 116, 0, 2443);
+    			add_location(div6, file, 117, 0, 2492);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

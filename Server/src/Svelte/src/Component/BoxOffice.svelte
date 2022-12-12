@@ -5,16 +5,12 @@
     
 
     async function getBoxOffice(range) {
+        const regex = /[^0-9]/g;
         const response1 = await fetch("/" + range);
         const result1 = await response1.json();
 
-        console.log(result1);
-
         
-        const regex = /[^0-9]/g;
-
         
-
         const list = await result1.boxOfficeResult.dailyBoxOfficeList.map(async (movie) => {
             const response = await fetch(`/searchTitle?title=${movie.movieNm}&releaseDts=${movie.openDt.replace(regex, "")}`);
             const result = await response.json();
@@ -134,34 +130,36 @@
         <button on:click={() => {ranks = getBoxOffice("weekly")}}>주간박스오피스</button>
     </div>
     <div>
+        {#await ranks}
+        {:then ranks}
         <div class="uk-card uk-card-default">
             <div id="card-boxoffice"class="card-body" uk-slider>
                 <ul class="uk-slider-items uk-child-width-1-4 uk-grid">
-                    {#await ranks}
-                        
-                    {:then ranks} 
-                        
-                    {#each ranks.result.Data[0].Result[0] as movie, index}
+                    {#each ranks as movie, index}
+                    {#await movie}
+                    {:then movie} 
                     <li>
                         <div class="uk-panel">
                             <div>
-                                <span>{index}</span>
-                                <!-- <img src={movie.} alt="포스터 불러오기 실패"/> -->
+                                <span>{index+1}</span>
+                                <img src={movie.Data[0].Result[0].posters.split('|', 1)[0]} alt="포스터 불러오기 실패"/>
                             </div>
                             <div id="movie-info">
-                                <h4>{movie.title}</h4>
-                                <h5>{movie.actors.actor[0].actorNm}, {movie.actors.actor[1].actorNm} 주연</h5>
+                                <h4>{movie.Data[0].Result[0].title.replace(/!HS | !HE/g, "")}</h4>
+                                <h5>{movie.Data[0].Result[0].actors.actor[0].actorNm} 주연</h5>
+                                <h5>{movie.Data[0].Result[0].actors.actor[0].actorNm} 주연</h5>
                                 <!-- <h5>{movie.audiInten.toLocaleString("kr")}명</h5> -->
                             </div>
                         </div>
                     </li>
-                    {/each}
                     {/await}
+                    {/each}
                 </ul>
                 <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                 <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
             </div>
         </div>
+        {/await}
     </div>
     <!-- <div>
         <div class="uk-card uk-card-default">
@@ -194,5 +192,3 @@
         {/await}
     </div> -->
 </div>
-<p>안녕하세요 영화 SNS입니다 감사합니다</p>
-<p></p>
