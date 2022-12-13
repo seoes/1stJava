@@ -118,8 +118,8 @@
         <h4><a href="/">영화 탐색</a></h4>
         <h4><a href="/board/*">리뷰 보기</a></h4>
         <h4><a href="/theater/*">영화관 찾기</a></h4>
-        <h4><a href='/login'>Login</a></h4>
-        <h4><a href="/register">Register</a></h4>
+        <h4><a href='/login'>로그인</a></h4>
+        <h4><a href="/register">회원가입</a></h4>
     </div>
 </div>
 <div uk-grid class="uk-grid-collapse">

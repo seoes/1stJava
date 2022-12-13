@@ -183,10 +183,6 @@
 
 <div class="uk-grid-column-small uk-grid-row-small uk-child-width-1-1 uk-child-width-1-1@m" uk-grid>
     <div>
-        <button on:click={() => {ranks = getBoxOffice("daily")}}>일간박스오피스</button>
-        <button on:click={() => {ranks = getBoxOffice("weekly")}}>주간박스오피스</button>
-    </div>
-    <div>
         <div class="uk-card uk-card-default">
             <div>
                 <div id="boxoffice-select" class="uk-grid-collapse uk-child-width-expand uk-text-center uk-margin-large-top" uk-grid>

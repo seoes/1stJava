@@ -35,12 +35,7 @@
     ]
     </script>
 
-<style>
-    #lists > div > .uk-card img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-</style>
+
 
 <div id="lists" class="uk-grid-column-small uk-grid-row-small uk-child-width-1-2 uk-child-width-1-3@m uk-child-width-1-5@l uk-child-width-1-6@xl" uk-grid="masonry: true">
     {#each datas as data}

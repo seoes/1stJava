@@ -34,6 +34,13 @@
     };
 </script>
 
+<style>
+    img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+</style>
+
 
 <div in:fade class="uk-card uk-card-default movie-card">
     <div>
