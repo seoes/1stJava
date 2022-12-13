@@ -41,14 +41,14 @@ let password;
     <div id="nameTag">아이디</div>
     <tr>
       <td id="tduserID">
-        <input type="text" id="userID"  bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+        <input class="uk-input" type="text" id="userID"  bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
       </td>
     </tr>
     <br>
     <div id="nameTag">비밀번호</div>
     <tr>
       <td>
-        <input type="text" id="password"  bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+        <input class="uk-input" type="text" id="password"  bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
       </td>
     </tr>
     <tr>

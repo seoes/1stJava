@@ -1,47 +1,34 @@
 
 
 <script type="text/javascript">
-let userTel;
-let userID;
-let userEmail;
-let userName;
-let password; 
-
-function submitInfo() {
-    fetch("/addMember", {
-        type: "POST",
-        body: {
-            userID: userID,
-            userName: userName,
-            userEmail : userEmail,
-            userTel : userTel,
-            password : password
-        }
-    })
-    .then(res => res.json())
-    .then(result => {
-        alert('success')
-            if (result.trim() == 'ok') {
-                console.log(response);
+    let userTel;
+    let userID;
+    let userEmail;
+    let userName;
+    let password;
+    
+    function submitInfo() {
+        fetch("/addMember", {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: "POST",
+            body: JSON.stringify({
+                userID: userID,
+                userName: userName,
+                userEmail : userEmail,
+                userTel : userTel,
+                password : password
+            })
+        })
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
                 alert("가입되었습니다!");
-                location.href="../login";
-            } else {
-                alert("가입되지 않았습니다!");
-                console.log(response);
-                userID = "";
-                userName ="";
-                userEmail = "";
-                userTel = "";
-                password ="";
-            }
-        })
-        .catch(error => {
-          alert("실패");
-          console.log(error);
-           password ="";
-        })
+                location.href="/";
+            })
     }
-</script>
+    </script>
 
 
 
@@ -53,14 +40,14 @@ function submitInfo() {
         <div id="nameTag">아이디</div>
         <tr>
             <td>
-                <input type="text" id = "userID" name="userID" bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id = "userID" name="userID" bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">이름</div>
         <tr>
             <td>
-                <input type="text" id="userName" name="userName"  bind:value={userName} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userName" name="userName"  bind:value={userName} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
@@ -68,21 +55,21 @@ function submitInfo() {
         <tr>
             
             <td>
-                <input type="text" id="userTel" name="userTel" bind:value={userTel}  size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userTel" name="userTel" bind:value={userTel}  size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">이메일</div>
         <tr>
             <td>
-                <input type="text" id="userEmail" name="userEmail" bind:value={userEmail} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userEmail" name="userEmail" bind:value={userEmail} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">비밀번호</div>
         <tr>
             <td>
-                <input type="text" id="password" name="password" bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="password" name="password" bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <tr>
