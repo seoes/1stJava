@@ -95,14 +95,16 @@
 
 
 <div id="header">
-    <div id="header-logo">
-        <img src="/img/wwm_logo.png"/>
-        <div>
-            <h2>WWM</h2>
-            <h3>World Wide Movie</h3>
+    <a href="/">
+        <div id="header-logo">
+            <img src="/img/wwm_logo.png"/>
+            <div>
+                <h2>WWM</h2>
+                <h3>World Wide Movie</h3>
+            </div>
+       
         </div>
-        
-    </div>
+    </a>
     <div id="header-search">
         <div>
             <input id="search-input" type="text" placeholder="영화 제목 검색" bind:value={movieTitle}/>
