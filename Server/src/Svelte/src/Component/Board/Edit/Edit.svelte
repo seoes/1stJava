@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head>
-  <meta charset="UTF-8" />
-  <title>게시판 - 글 수정</title>
-  <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
-</head>
-<body>
+
 <div class="container">
   <form th:action="@{'/post/edit/' + ${post.id}}" method="post">
     <input type="hidden" name="_method" value="put" />
@@ -54,7 +47,7 @@
     </div>
   </form>
 </div>
-<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
-<script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
 </body>
 </html>

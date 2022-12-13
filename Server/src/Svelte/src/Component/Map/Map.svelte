@@ -1,5 +1,5 @@
 <script>
-  import { Route } from "tinro";
+import { Route } from "tinro";
 import FindMyLocation from "./FindMyLocation.svelte";
 import SearchLocation from "./SearchLocation.svelte";
 import SetMap from "./SetMap.svelte";
