@@ -10,7 +10,7 @@
     export let post;
 
 </script>
-<div>
+
 <article class="uk-article">
 
     <h1 class="uk-article-title"><a class="uk-link-reset" href="">{post.title}</a></h1>
@@ -22,13 +22,36 @@
 
     <div class="uk-grid-small uk-child-width-auto" uk-grid>
         <div>
-            <a class="uk-button uk-button-text" href="/board">목록으로</a>
+            
         </div>  
     </div>
+    <div class="btn_col">
     <Post_detail_like_btn/>
     <button>수정</button>
     <button>삭제</button>
-
+    <button>
+    <a class="uk-button uk-button-text" href="/board">목록</a>
+    </button>
+    </div>
 
 </article>
-</div>
+
+
+<style>
+    button {
+        border-radius: 71.5px;
+        background: #b9b9b9;
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+        border: none;
+        font-weight: bold;
+    }
+
+    article {
+        width:fit-content;
+    }
+    .btn_col {
+        float :left;
+    }
+</style>

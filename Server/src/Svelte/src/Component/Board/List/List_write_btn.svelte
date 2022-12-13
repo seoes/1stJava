@@ -8,6 +8,17 @@
     .right-box {
         float: right;
     }
+
+    button {
+        border-radius: 71.5px;
+        background: #b9b9b9;
+        width: 90px;
+        height: 35px;
+        font-size: 15px;
+        border: none;
+        font-weight: bold;
+        
+    }
 </style>
 
 
@@ -18,7 +29,7 @@
     <a href = "/board/post_write">
         <p uk-margin>
             <button class="uk-button uk-button-default uk-button-small">
-                글쓰기
+               + 글쓰기
             </button>
         </p>
     </a>

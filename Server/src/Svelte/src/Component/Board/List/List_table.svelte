@@ -15,11 +15,27 @@
       const result = await response.json();
       return result;
     }
+
+    posts = [{
+      id : "1",
+      author : "hyerim",
+      title : "안녕하세요 이 영화 좋아요",
+      content : "백두산 제발 꼭 보세요!"
+    },
+    {
+      id : "2",
+      author : "nayoung",
+      title : "라라랜드 후기",
+      content : "라라랜드 제발제발제발 제발 꼭 보세요!"
+    }
+  
+  ]
+
 </script>
 
 <Route path="/post_detail/:post_id"><Post_detail bind:post={select_post}/>></Route>
 <div>
-    <table class="uk-table uk-table-hover">
+    <table class="uk-table uk-table-divider">
       <thead>
       <tr>
         <th scope="col">번호</th>
@@ -37,7 +53,7 @@
             <tr>
               <th><span>{post.id}</span></th>
               <th>
-                <a href='/board/post_detail/{post.id}' on:click ={()=>{select_post=post}} ><span>{post.title}</span></a>
+                <a href='/board/post_detail/{post.id}' on:click ={()=>{select_post=post}} style="color :black" ><span>{post.title}</span></a>
               </th>
               <th><span>{post.author}</span></th>
               <th><span>{post.date}</span></th>

@@ -8,10 +8,7 @@ body {
     border-radius: 20px;
 }
 
-#lists > div > .uk-card img{
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
+
 dl dt {
     font-weight: 800;
 }

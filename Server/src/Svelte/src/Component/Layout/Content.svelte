@@ -20,6 +20,7 @@
 
 <div style="margin:0 auto;" class="uk-width-1-1 uk-width-5-6@s uk-padding-small">
     <Route path="/">
+        <!-- <Testlist /> -->
         <BoxOffice/>
         <MovieCards/>
     </Route>
