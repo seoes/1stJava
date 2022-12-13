@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/BoxOffice.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
