@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
 </head>
 <body>
-<header th:insert="common/header.html"></header>
 <div class="container">
   <form th:action="@{'/post/edit/' + ${post.id}}" method="post">
     <input type="hidden" name="_method" value="put" />

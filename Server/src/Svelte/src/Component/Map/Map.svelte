@@ -1,5 +1,5 @@
 <script>
-  import { Route } from "tinro";
+import { Route } from "tinro";
 import FindMyLocation from "./FindMyLocation.svelte";
 import SearchLocation from "./SearchLocation.svelte";
 import SetMap from "./SetMap.svelte";
@@ -37,9 +37,11 @@ let selectedTheater = {};
         <SetMap bind:map={map}/>
         <SetMarker bind:map={map} bind:selectedTheater={selectedTheater}/>
     </div>
+    <a href="/theater/detail/123">123</a>
     <!-- <SearchLocation /> -->
     <!-- <FindMyLocation bind:map={map}/> -->
     <Route path='/detail/:_code'>
         <TheaterPopup bind:selectedTheater={selectedTheater}/>
     </Route>
+    
 </div>
