@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Common/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Common/Header.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List.svelte" afterDir="false" />
@@ -14,17 +13,6 @@
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail_like_btn.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail_like_btn.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_write/Post_write.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_write/Post_write.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Header.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/List.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post_add.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post_edit.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Posts.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/BoardMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" afterDir="false" />

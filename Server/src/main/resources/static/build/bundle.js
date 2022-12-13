@@ -4366,8 +4366,9 @@ var app = (function () {
     			strong.textContent = "게시판";
     			t1 = space();
     			create_component(route.$$.fragment);
-    			add_location(strong, file$b, 7, 65, 193);
+    			add_location(strong, file$b, 7, 87, 215);
     			attr_dev(a, "href", "/board/");
+    			attr_dev(a, "style", "color :black");
     			add_location(a, file$b, 7, 47, 175);
     			attr_dev(h3, "class", "uk-heading-line uk-text-center");
     			add_location(h3, file$b, 7, 4, 132);
@@ -4739,19 +4740,15 @@ var app = (function () {
     	let t6;
     	let input1;
     	let t7;
-    	let hr0;
-    	let t8;
     	let div2;
     	let textarea;
-    	let t9;
+    	let t8;
     	let div3;
-    	let t10;
-    	let hr1;
-    	let t11;
+    	let t9;
     	let div4;
-    	let button0;
-    	let t13;
-    	let button1;
+    	let button;
+    	let t11;
+    	let hr;
     	let mounted;
     	let dispose;
 
@@ -4774,21 +4771,16 @@ var app = (function () {
     			t6 = space();
     			input1 = element("input");
     			t7 = space();
-    			hr0 = element("hr");
-    			t8 = space();
     			div2 = element("div");
     			textarea = element("textarea");
-    			t9 = space();
+    			t8 = space();
     			div3 = element("div");
-    			t10 = space();
-    			hr1 = element("hr");
-    			t11 = space();
+    			t9 = space();
     			div4 = element("div");
-    			button0 = element("button");
-    			button0.textContent = "저장";
-    			t13 = space();
-    			button1 = element("button");
-    			button1.textContent = "post값 확인";
+    			button = element("button");
+    			button.textContent = "저장";
+    			t11 = space();
+    			hr = element("hr");
     			attr_dev(legend, "class", "uk-legend");
     			add_location(legend, file$8, 23, 6, 571);
     			attr_dev(label0, "class", "uk-form-label");
@@ -4809,23 +4801,21 @@ var app = (function () {
     			add_location(input1, file$8, 33, 8, 950);
     			attr_dev(div1, "class", "uk-margin");
     			add_location(div1, file$8, 30, 6, 836);
-    			add_location(hr0, file$8, 35, 4, 1049);
-    			attr_dev(textarea, "class", "uk-textarea svelte-15lna0i");
+    			attr_dev(textarea, "class", "uk-textarea svelte-xdvims");
     			attr_dev(textarea, "rows", "5");
     			attr_dev(textarea, "placeholder", "내용을 입력해주세요");
     			attr_dev(textarea, "aria-label", "Textarea");
-    			add_location(textarea, file$8, 38, 8, 1096);
+    			add_location(textarea, file$8, 37, 8, 1086);
     			attr_dev(div2, "class", "uk-margin");
-    			add_location(div2, file$8, 37, 6, 1063);
-    			add_location(div3, file$8, 40, 6, 1241);
-    			add_location(hr1, file$8, 42, 6, 1268);
+    			add_location(div2, file$8, 36, 6, 1053);
+    			add_location(div3, file$8, 39, 6, 1231);
     			attr_dev(fieldset, "class", "uk-fieldset");
     			add_location(fieldset, file$8, 21, 2, 531);
     			add_location(form, file$8, 20, 0, 521);
-    			attr_dev(button0, "class", "uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom");
-    			add_location(button0, file$8, 46, 6, 1317);
-    			add_location(button1, file$8, 47, 6, 1465);
-    			add_location(div4, file$8, 45, 2, 1304);
+    			attr_dev(button, "class", "uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom svelte-xdvims");
+    			add_location(button, file$8, 45, 6, 1299);
+    			add_location(div4, file$8, 44, 2, 1286);
+    			add_location(hr, file$8, 47, 2, 1453);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4847,28 +4837,23 @@ var app = (function () {
     			append_dev(div1, input1);
     			set_input_value(input1, /*post*/ ctx[0].author);
     			append_dev(fieldset, t7);
-    			append_dev(fieldset, hr0);
-    			append_dev(fieldset, t8);
     			append_dev(fieldset, div2);
     			append_dev(div2, textarea);
     			set_input_value(textarea, /*post*/ ctx[0].content);
-    			append_dev(fieldset, t9);
+    			append_dev(fieldset, t8);
     			append_dev(fieldset, div3);
-    			append_dev(fieldset, t10);
-    			append_dev(fieldset, hr1);
-    			insert_dev(target, t11, anchor);
+    			insert_dev(target, t9, anchor);
     			insert_dev(target, div4, anchor);
-    			append_dev(div4, button0);
-    			append_dev(div4, t13);
-    			append_dev(div4, button1);
+    			append_dev(div4, button);
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, hr, anchor);
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(input0, "input", /*input0_input_handler*/ ctx[2]),
     					listen_dev(input1, "input", /*input1_input_handler*/ ctx[3]),
     					listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[4]),
-    					listen_dev(button0, "click", /*click_handler*/ ctx[5], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_1*/ ctx[6], false, false, false)
+    					listen_dev(button, "click", /*click_handler*/ ctx[5], false, false, false)
     				];
 
     				mounted = true;
@@ -4891,8 +4876,10 @@ var app = (function () {
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(form);
-    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(t9);
     			if (detaching) detach_dev(div4);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(hr);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -4954,10 +4941,6 @@ var app = (function () {
     		addPost();
     	};
 
-    	const click_handler_1 = () => {
-    		console.log(post);
-    	};
-
     	$$self.$capture_state = () => ({
     		Post_write_form,
     		Post_write_submit_btn,
@@ -4979,8 +4962,7 @@ var app = (function () {
     		input0_input_handler,
     		input1_input_handler,
     		textarea_input_handler,
-    		click_handler,
-    		click_handler_1
+    		click_handler
     	];
     }
 
@@ -5005,7 +4987,8 @@ var app = (function () {
     function create_fragment$9(ctx) {
     	let button;
     	let a;
-    	let t;
+    	let t0;
+    	let t1;
     	let mounted;
     	let dispose;
 
@@ -5013,10 +4996,12 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			a = element("a");
-    			t = text(/*btn_like*/ ctx[0]);
+    			t0 = space();
+    			t1 = text(/*btn_like*/ ctx[0]);
     			attr_dev(a, "href", "");
     			attr_dev(a, "uk-icon", "heart");
     			add_location(a, file$7, 5, 29, 127);
+    			attr_dev(button, "class", "svelte-161zsjd");
     			add_location(button, file$7, 5, 0, 98);
     		},
     		l: function claim(nodes) {
@@ -5025,7 +5010,8 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
     			append_dev(button, a);
-    			append_dev(button, t);
+    			append_dev(button, t0);
+    			append_dev(button, t1);
 
     			if (!mounted) {
     				dispose = listen_dev(button, "click", /*likeClick*/ ctx[1], false, false, false);
@@ -5033,7 +5019,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*btn_like*/ 1) set_data_dev(t, /*btn_like*/ ctx[0]);
+    			if (dirty & /*btn_like*/ 1) set_data_dev(t1, /*btn_like*/ ctx[0]);
     		},
     		i: noop,
     		o: noop,
@@ -5327,7 +5313,6 @@ var app = (function () {
     const file$4 = "src/Component/Board/Post_detail/Post_detail.svelte";
 
     function create_fragment$6(ctx) {
-    	let div2;
     	let article;
     	let h1;
     	let a0;
@@ -5347,19 +5332,21 @@ var app = (function () {
     	let t7;
     	let div1;
     	let div0;
-    	let a2;
-    	let t9;
+    	let t8;
+    	let div2;
     	let post_detail_like_btn;
-    	let t10;
+    	let t9;
     	let button0;
-    	let t12;
+    	let t11;
     	let button1;
+    	let t13;
+    	let button2;
+    	let a2;
     	let current;
     	post_detail_like_btn = new Post_detail_like_btn({ $$inline: true });
 
     	const block = {
     		c: function create() {
-    			div2 = element("div");
     			article = element("article");
     			h1 = element("h1");
     			a0 = element("a");
@@ -5376,46 +5363,53 @@ var app = (function () {
     			t7 = space();
     			div1 = element("div");
     			div0 = element("div");
-    			a2 = element("a");
-    			a2.textContent = "목록으로";
-    			t9 = space();
+    			t8 = space();
+    			div2 = element("div");
     			create_component(post_detail_like_btn.$$.fragment);
-    			t10 = space();
+    			t9 = space();
     			button0 = element("button");
     			button0.textContent = "수정";
-    			t12 = space();
+    			t11 = space();
     			button1 = element("button");
     			button1.textContent = "삭제";
+    			t13 = space();
+    			button2 = element("button");
+    			a2 = element("a");
+    			a2.textContent = "목록";
     			attr_dev(a0, "class", "uk-link-reset");
     			attr_dev(a0, "href", "");
-    			add_location(a0, file$4, 15, 33, 552);
+    			add_location(a0, file$4, 15, 33, 547);
     			attr_dev(h1, "class", "uk-article-title");
-    			add_location(h1, file$4, 15, 4, 523);
+    			add_location(h1, file$4, 15, 4, 518);
     			attr_dev(a1, "href", "#");
-    			add_location(a1, file$4, 17, 42, 652);
+    			add_location(a1, file$4, 17, 42, 647);
     			attr_dev(p0, "class", "uk-article-meta");
-    			add_location(p0, file$4, 17, 4, 614);
+    			add_location(p0, file$4, 17, 4, 609);
     			attr_dev(p1, "class", "uk-text-lead");
-    			add_location(p1, file$4, 19, 4, 711);
-    			attr_dev(a2, "class", "uk-button uk-button-text");
-    			attr_dev(a2, "href", "/board");
-    			add_location(a2, file$4, 24, 12, 847);
-    			add_location(div0, file$4, 23, 8, 828);
+    			add_location(p1, file$4, 19, 4, 706);
+    			add_location(div0, file$4, 23, 8, 823);
     			attr_dev(div1, "class", "uk-grid-small uk-child-width-auto");
     			attr_dev(div1, "uk-grid", "");
-    			add_location(div1, file$4, 22, 4, 763);
-    			add_location(button0, file$4, 28, 4, 970);
-    			add_location(button1, file$4, 29, 4, 995);
-    			attr_dev(article, "class", "uk-article");
-    			add_location(article, file$4, 13, 0, 487);
-    			add_location(div2, file$4, 12, 0, 480);
+    			add_location(div1, file$4, 22, 4, 758);
+    			attr_dev(button0, "class", "svelte-tq4hyg");
+    			add_location(button0, file$4, 29, 4, 934);
+    			attr_dev(button1, "class", "svelte-tq4hyg");
+    			add_location(button1, file$4, 30, 4, 959);
+    			attr_dev(a2, "class", "uk-button uk-button-text");
+    			attr_dev(a2, "href", "/board");
+    			add_location(a2, file$4, 32, 4, 998);
+    			attr_dev(button2, "class", "svelte-tq4hyg");
+    			add_location(button2, file$4, 31, 4, 984);
+    			attr_dev(div2, "class", "btn_col svelte-tq4hyg");
+    			add_location(div2, file$4, 27, 4, 878);
+    			attr_dev(article, "class", "uk-article svelte-tq4hyg");
+    			add_location(article, file$4, 13, 0, 482);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, article);
+    			insert_dev(target, article, anchor);
     			append_dev(article, h1);
     			append_dev(h1, a0);
     			append_dev(a0, t0);
@@ -5431,13 +5425,16 @@ var app = (function () {
     			append_dev(article, t7);
     			append_dev(article, div1);
     			append_dev(div1, div0);
-    			append_dev(div0, a2);
-    			append_dev(article, t9);
-    			mount_component(post_detail_like_btn, article, null);
-    			append_dev(article, t10);
-    			append_dev(article, button0);
-    			append_dev(article, t12);
-    			append_dev(article, button1);
+    			append_dev(article, t8);
+    			append_dev(article, div2);
+    			mount_component(post_detail_like_btn, div2, null);
+    			append_dev(div2, t9);
+    			append_dev(div2, button0);
+    			append_dev(div2, t11);
+    			append_dev(div2, button1);
+    			append_dev(div2, t13);
+    			append_dev(div2, button2);
+    			append_dev(button2, a2);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -5455,7 +5452,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(article);
     			destroy_component(post_detail_like_btn);
     		}
     	};
@@ -5551,7 +5548,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (20:0) <Route path="/post_detail/:post_id">
+    // (36:0) <Route path="/post_detail/:post_id">
     function create_default_slot$2(ctx) {
     	let post_detail;
     	let updating_post;
@@ -5611,7 +5608,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$2.name,
     		type: "slot",
-    		source: "(20:0) <Route path=\\\"/post_detail/:post_id\\\">",
+    		source: "(36:0) <Route path=\\\"/post_detail/:post_id\\\">",
     		ctx
     	});
 
@@ -5633,7 +5630,7 @@ var app = (function () {
     	return block;
     }
 
-    // (35:8) {:then posts}
+    // (51:8) {:then posts}
     function create_then_block(ctx) {
     	let each_1_anchor;
     	let each_value = /*posts*/ ctx[1];
@@ -5694,14 +5691,14 @@ var app = (function () {
     		block,
     		id: create_then_block.name,
     		type: "then",
-    		source: "(35:8) {:then posts}",
+    		source: "(51:8) {:then posts}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:12) {#each posts as post}
+    // (52:12) {#each posts as post}
     function create_each_block(ctx) {
     	let tr;
     	let th0;
@@ -5714,6 +5711,7 @@ var app = (function () {
     	let span1;
     	let t2_value = /*post*/ ctx[4].title + "";
     	let t2;
+    	let a_href_value;
     	let t3;
     	let th2;
     	let span2;
@@ -5752,17 +5750,18 @@ var app = (function () {
     			span3 = element("span");
     			t6 = text(t6_value);
     			t7 = space();
-    			add_location(span0, file$3, 37, 18, 1007);
-    			add_location(th0, file$3, 37, 14, 1003);
-    			add_location(span1, file$3, 39, 91, 1147);
-    			attr_dev(a, "href", "/board/post_detail/" + /*post*/ ctx[4].id);
-    			add_location(a, file$3, 39, 16, 1072);
-    			add_location(th1, file$3, 38, 14, 1050);
-    			add_location(span2, file$3, 41, 18, 1217);
-    			add_location(th2, file$3, 41, 14, 1213);
-    			add_location(span3, file$3, 42, 18, 1268);
-    			add_location(th3, file$3, 42, 14, 1264);
-    			add_location(tr, file$3, 36, 12, 983);
+    			add_location(span0, file$3, 53, 18, 1280);
+    			add_location(th0, file$3, 53, 14, 1276);
+    			add_location(span1, file$3, 55, 112, 1441);
+    			attr_dev(a, "href", a_href_value = "/board/post_detail/" + /*post*/ ctx[4].id);
+    			attr_dev(a, "style", "color :black");
+    			add_location(a, file$3, 55, 16, 1345);
+    			add_location(th1, file$3, 54, 14, 1323);
+    			add_location(span2, file$3, 57, 18, 1511);
+    			add_location(th2, file$3, 57, 14, 1507);
+    			add_location(span3, file$3, 58, 18, 1562);
+    			add_location(th3, file$3, 58, 14, 1558);
+    			add_location(tr, file$3, 52, 12, 1256);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -5791,6 +5790,15 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
+    			if (dirty & /*posts*/ 2 && t0_value !== (t0_value = /*post*/ ctx[4].id + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*posts*/ 2 && t2_value !== (t2_value = /*post*/ ctx[4].title + "")) set_data_dev(t2, t2_value);
+
+    			if (dirty & /*posts*/ 2 && a_href_value !== (a_href_value = "/board/post_detail/" + /*post*/ ctx[4].id)) {
+    				attr_dev(a, "href", a_href_value);
+    			}
+
+    			if (dirty & /*posts*/ 2 && t4_value !== (t4_value = /*post*/ ctx[4].author + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*posts*/ 2 && t6_value !== (t6_value = /*post*/ ctx[4].date + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -5803,14 +5811,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(36:12) {#each posts as post}",
+    		source: "(52:12) {#each posts as post}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (32:22)           <!-- 로딩중 -->          <h4>L o a d i n g</h4>          {:then posts}
+    // (48:22)           <!-- 로딩중 -->          <h4>L o a d i n g</h4>          {:then posts}
     function create_pending_block(ctx) {
     	let h4;
 
@@ -5818,7 +5826,7 @@ var app = (function () {
     		c: function create() {
     			h4 = element("h4");
     			h4.textContent = "L o a d i n g";
-    			add_location(h4, file$3, 33, 8, 888);
+    			add_location(h4, file$3, 49, 8, 1161);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h4, anchor);
@@ -5833,7 +5841,7 @@ var app = (function () {
     		block,
     		id: create_pending_block.name,
     		type: "pending",
-    		source: "(32:22)           <!-- 로딩중 -->          <h4>L o a d i n g</h4>          {:then posts}",
+    		source: "(48:22)           <!-- 로딩중 -->          <h4>L o a d i n g</h4>          {:then posts}",
     		ctx
     	});
 
@@ -5856,6 +5864,7 @@ var app = (function () {
     	let th3;
     	let t8;
     	let tbody;
+    	let promise;
     	let current;
 
     	route = new Route({
@@ -5878,7 +5887,7 @@ var app = (function () {
     		value: 1
     	};
 
-    	handle_promise(/*posts*/ ctx[1], info);
+    	handle_promise(promise = /*posts*/ ctx[1], info);
 
     	const block = {
     		c: function create() {
@@ -5903,19 +5912,19 @@ var app = (function () {
     			tbody = element("tbody");
     			info.block.c();
     			attr_dev(th0, "scope", "col");
-    			add_location(th0, file$3, 24, 8, 664);
+    			add_location(th0, file$3, 40, 8, 937);
     			attr_dev(th1, "scope", "col");
-    			add_location(th1, file$3, 25, 8, 697);
+    			add_location(th1, file$3, 41, 8, 970);
     			attr_dev(th2, "scope", "col");
-    			add_location(th2, file$3, 26, 8, 730);
+    			add_location(th2, file$3, 42, 8, 1003);
     			attr_dev(th3, "scope", "col");
-    			add_location(th3, file$3, 27, 8, 764);
-    			add_location(tr, file$3, 23, 6, 650);
-    			add_location(thead, file$3, 22, 6, 635);
-    			add_location(tbody, file$3, 30, 6, 825);
-    			attr_dev(table, "class", "uk-table uk-table-hover");
-    			add_location(table, file$3, 21, 4, 588);
-    			add_location(div, file$3, 20, 0, 577);
+    			add_location(th3, file$3, 43, 8, 1037);
+    			add_location(tr, file$3, 39, 6, 923);
+    			add_location(thead, file$3, 38, 6, 908);
+    			add_location(tbody, file$3, 46, 6, 1098);
+    			attr_dev(table, "class", "uk-table uk-table-divider");
+    			add_location(table, file$3, 37, 4, 859);
+    			add_location(div, file$3, 36, 0, 848);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5950,7 +5959,11 @@ var app = (function () {
     			}
 
     			route.$set(route_changes);
-    			update_await_block_branch(info, ctx, dirty);
+    			info.ctx = ctx;
+
+    			if (dirty & /*posts*/ 2 && promise !== (promise = /*posts*/ ctx[1]) && handle_promise(promise, info)) ; else {
+    				update_await_block_branch(info, ctx, dirty);
+    			}
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -5997,6 +6010,22 @@ var app = (function () {
     	let select_post;
     	let posts = getPosts();
     	console.log(posts);
+
+    	posts = [
+    		{
+    			id: "1",
+    			author: "hyerim",
+    			title: "안녕하세요 이 영화 좋아요",
+    			content: "백두산 제발 꼭 보세요!"
+    		},
+    		{
+    			id: "2",
+    			author: "nayoung",
+    			title: "라라랜드 후기",
+    			content: "라라랜드 제발제발제발 제발 꼭 보세요!"
+    		}
+    	];
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -6050,7 +6079,7 @@ var app = (function () {
     /* src/Component/Board/List/List_write_btn.svelte generated by Svelte v3.53.1 */
     const file$2 = "src/Component/Board/List/List_write_btn.svelte";
 
-    // (14:0) <Route path="/post_write">
+    // (25:0) <Route path="/post_write">
     function create_default_slot$1(ctx) {
     	let post_write;
     	let current;
@@ -6082,7 +6111,7 @@ var app = (function () {
     		block,
     		id: create_default_slot$1.name,
     		type: "slot",
-    		source: "(14:0) <Route path=\\\"/post_write\\\">",
+    		source: "(25:0) <Route path=\\\"/post_write\\\">",
     		ctx
     	});
 
@@ -6115,15 +6144,15 @@ var app = (function () {
     			a = element("a");
     			p = element("p");
     			button = element("button");
-    			button.textContent = "글쓰기";
-    			attr_dev(button, "class", "uk-button uk-button-default uk-button-small");
-    			add_location(button, file$2, 19, 12, 351);
+    			button.textContent = "+ 글쓰기";
+    			attr_dev(button, "class", "uk-button uk-button-default uk-button-small svelte-ffjn8h");
+    			add_location(button, file$2, 30, 12, 568);
     			attr_dev(p, "uk-margin", "");
-    			add_location(p, file$2, 18, 8, 324);
+    			add_location(p, file$2, 29, 8, 541);
     			attr_dev(a, "href", "/board/post_write");
-    			add_location(a, file$2, 17, 4, 284);
-    			attr_dev(div, "class", "right-box svelte-1lantra");
-    			add_location(div, file$2, 16, 0, 253);
+    			add_location(a, file$2, 28, 4, 501);
+    			attr_dev(div, "class", "right-box svelte-ffjn8h");
+    			add_location(div, file$2, 27, 0, 470);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
