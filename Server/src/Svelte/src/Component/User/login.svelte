@@ -44,7 +44,7 @@ let password;
         <input type="text" id="userID"  bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
       </td>
     </tr>
-    
+    <br>
     <div id="nameTag">비밀번호</div>
     <tr>
       <td>
@@ -52,16 +52,16 @@ let password;
       </td>
     </tr>
     <tr>
-      <td colspan="2">
-        <button type="button"  on:click={gotoLogin} id="login">로그인</button>
-        <a
+      <td id="tdButton" colspan="2">
+        <button type="button" on:click={gotoLogin} id="login">로그인</button>
+        <button><a
                 href="../register"
                 style= "
                 color: black;
-                font-size: 1.0em;
                 font-weight: bold;
                 text-decoration-line: none;
-                ">회원가입</a>
+                "
+                id="membership">회원가입</a></button>
 
       </td>
     </tr>
@@ -79,13 +79,13 @@ let password;
 
   table, td {
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   #app > #WWMLogin {
     font-weight: bold;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
   }
   
@@ -98,5 +98,31 @@ let password;
   #app > table > #nameTag {
     color: black;
     font-weight: bold;
+  }
+
+  #app > table > tr > #tdButton{
+    text-align: center;
+    height: 200px;
+  }
+
+  #app > table > tr > td > #login {
+    padding: 0;
+    border: none;
+    background: #b9b9b9;
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 71.5px;
+    margin-right: 30px;
+
+  }
+  #app > table > tr > td > button {
+    border-radius: 71.5px;
+    background: #b9b9b9;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border: none
   }
 </style>
