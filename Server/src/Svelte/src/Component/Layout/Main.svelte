@@ -109,8 +109,7 @@
     <div id="header-search">
         <div>
             <input id="search-input" type="text" placeholder="영화 제목 검색" bind:value={movieTitle}/>
-            <button on:click={() => {router.goto(`/loading/${movieTitle}`)}}>출발</button>
-            <span uk-icon="search" on:click={() => {router.goto(`/search/${movieTitle}`)}}></span>
+            <span uk-icon="search" on:click={() => {router.goto(`/loading/${movieTitle}`)}}></span>
         </div>
     </div>
     <div id="header-menu">
