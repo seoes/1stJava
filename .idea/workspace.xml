@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/register.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/register.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/BoardDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

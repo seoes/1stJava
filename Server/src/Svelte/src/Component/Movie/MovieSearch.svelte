@@ -154,17 +154,17 @@
             <div>
                 <a href="/movie/{movie.movieId}/{movie.movieSeq}">
                     {#if movie.posters == ""}
-                    <img style="background-color:{bgColor}" src="/img/alt-poster.png" alt="이미지 불러오기 실패"/>
+                    <img src="/img/alt-poster.png" alt="이미지 불러오기 실패"/>
                     {:else}
-                    <img style="background-color:{bgColor}" src={movie.posters.split('|', 1)[0]} alt="이미지 불러오기 실패"/>
+                    <img src={movie.posters.split('|', 1)[0]} alt="이미지 불러오기 실패"/>
                     {/if}
                 </a>
             </div>
             <div class="uk-card-body">
                 <a href="/movie/{movie.movieId}/{movie.movieSeq}">
-                    <h4 style="background-color: {titleColor}">{movie.title.replace(/!HS | !HE/g, "")}</h4>
-                    <h5 style="background-color: {titleColor}">{movie.directors.director[0].directorNm} 감독</h5>
-                    <h5 style="background-color: {titleColor}">{movie.actors.actor[0].actorNm} 주연</h5>
+                    <h4>{movie.title.replace(/!HS | !HE/g, "")}</h4>
+                    <h5>{movie.directors.director[0].directorNm} 감독</h5>
+                    <h5>{movie.actors.actor[0].actorNm} 주연</h5>
                 </a>
             </div>
         </div>

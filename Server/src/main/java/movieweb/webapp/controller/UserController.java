@@ -40,7 +40,7 @@ public class UserController {
         return "ok";
     }
     @PostMapping("/addMember")
-    public String addMember(User dto) {
+    public String addMember(@RequestBody User dto) {
         logger.info("MemberController addMember()");
         boolean b = userService.addMember(dto);
         logger.info(dto.toString());

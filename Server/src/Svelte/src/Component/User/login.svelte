@@ -5,7 +5,7 @@ let password;
  function gotoLogin ()
  {
   fetch("/addmember", {
-    type : "POST",
+    method : "POST",
     body : {
       id : userID,
       pwd : password
@@ -14,12 +14,12 @@ let password;
   .then(res => res.json())
     .then(result => {
             if (result === "") {
-              alert("아이디 또는 비밀번호를 확인하세요.");
+                alert("아이디 또는 비밀번호를 확인하세요.");
             userID = "";
             password = "";
             } else {
             sessionStorage.setItem("login", JSON.stringify(result));
-            alert(`${result.userName}님 환영합니다!`);
+            alert(`환영합니다!`);
             location.href = "/";
         }
       })
