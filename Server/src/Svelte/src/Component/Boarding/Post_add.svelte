@@ -28,36 +28,3 @@
     </form>
   </div>
 </body>
-
-
-<!-- <div>
-  <div>
-    <label for="inputTitle"><strong >제목</strong></label>
-    <input type="text" name="title" id="inputTitle"/>
-  </div>
-  <div>
-    <label for="inputAuthor"><strong >작성자</strong></label>
-    <input type="text" name="author" id="inputAuthor"/>
-  </div>
-  <div>
-    <label for="inputContent"><strong >내용</strong></label>
-    <input type="text" name="content" id="inputContent"/>
-  </div>
-</div>
- -->
-
-<!-- <script>
-  export let post;
-
-  const postSubmit =()=> {
-    console.log(post.id, post.title, post.author);
-  };
-</script>
-
-<h3>Write the posting</h3>
-<form on:submit|preventDefault={postSubmit}>
-  <input type="text" placeholder="author" bind:value={post.author} />
-  <input type="text" placeholder="title" bind:value={post.title} />
-  <input type="text" placeholder="content" bind:value={post.content} />
-  <button>ADD</button>
-</form> -->

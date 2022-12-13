@@ -4,5 +4,5 @@
 
 
 <div class="col-auto">
-    <a href="/post/edit"+post.id>수정</a>
+    <a href="board/post/edit+{post.id}">수정</a>
 </div>

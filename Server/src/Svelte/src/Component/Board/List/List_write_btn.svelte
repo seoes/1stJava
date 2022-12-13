@@ -1,13 +1,25 @@
 <script>
     import {Route} from 'tinro';
-    import Post_Write from "../Post_write/Post_write.svelte";    
+    import Post_write from "../Post_write/Post_write.svelte"
 </script>
 
+<style>
+    .right-box {
+        float: right;
+    }
+</style>
 
-<button>
-    <a href="/board/post_write">글쓰기</a>
-</button>
-<Route path="/board/post_write"><Post_Write/></Route>
-<!-- <div>
-    <p class="on" on:keypress={to_Post_write}>Go to Posting</p>
-</div> -->
+<div class = 'right-box'>
+    <p uk-margin>
+        <a href="/board/post_write">
+        <button class="uk-button uk-button-default uk-button-small">
+            글쓰기
+        </button>
+        </a>
+
+    </p>
+</div>
+
+<Route path="/post_write">
+    <Post_write/>
+</Route>        
