@@ -1,7 +1,8 @@
 <script>
     import Login from "../User/login.svelte";
     import Content from "./Content.svelte";
-
+    import { router } from "tinro";
+    let movieTitle;
 </script>
 
 <svelte:head>
@@ -16,7 +17,7 @@
     #header {
         background-color:#FFFFFF;
         color: #000000;
-        height:128px;
+        height:96px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -48,6 +49,7 @@
     #header-menu > * {
         margin: 0 12px 0 12px;
         font-weight: 200;
+        font-size: 14px;
         color: #9c9c9c;
     }
 
@@ -94,18 +96,21 @@
 
 
 <div id="header">
-    <div id="header-logo">
-        <img src="/img/wwm_logo.png"/>
-        <div>
-            <h2>WWM</h2>
-            <h3>World Wide Movie</h3>
+    <a href="/">
+        <div id="header-logo">
+            <img src="/img/wwm_logo.png"/>
+            <div>
+                <h2>WWM</h2>
+                <h3>World Wide Movie</h3>
+            </div>
+       
         </div>
-        
-    </div>
+    </a>
     <div id="header-search">
         <div>
-            <input id="search-input" type="text" placeholder="영화 제목 검색"/>
-            <span uk-icon="search"></span>
+            <input id="search-input" type="text" placeholder="영화 제목 검색" bind:value={movieTitle}/>
+            <button on:click={() => {router.goto(`/loading/${movieTitle}`)}}>출발</button>
+            <span uk-icon="search" on:click={() => {router.goto(`/search/${movieTitle}`)}}></span>
         </div>
     </div>
     <div id="header-menu">

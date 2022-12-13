@@ -46,30 +46,28 @@ public class MovieController {
                 .build();
         HttpEntity entity = new HttpEntity<>(headers);
 
-//        ResponseEntity<Map> response = restTemplate.getForObject(builder.toString(),Map.class);
         ResponseEntity<String> response = restTemplate.exchange(builder.toString(), HttpMethod.GET, entity, String.class);
+        return response.getBody();
+    }
 
-//        collection=kmdb_new2
-//        detail=N
-//        listCount=20
-//        ServiceKey=0Q768YE1107L574JOUZ8
+    @GetMapping("searchCode")
+    public String searchMovieByCode(@RequestParam("movieId") String movieId, @RequestParam("movieSeq") String movieSeq) throws JsonProcessingException {
+        RestTemplate restTemplate = new RestTemplate(new HttpComponentsClientHttpRequestFactory());
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        String url = "http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp";
 
+        UriComponents builder = UriComponentsBuilder.fromHttpUrl(url)
+                .queryParam("ServiceKey", "0Q768YE1107L574JOUZ8")
+                .queryParam("movieId", movieId)
+                .queryParam("movieSeq", movieSeq)
+                .queryParam("sort", "RANK,1")
+                .queryParam("listCount=20", 20)
+                .queryParam("collection=kmdb_new2")
+                .build();
+        HttpEntity entity = new HttpEntity<>(headers);
 
-//        HttpEntity<String> response = restTemplate.getForEntity(url, String.class);
-//        System.out.println(builder);
-//        System.out.println(response);
-
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        objectMapper.configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true);
-//        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
-//        String movies = objectMapper.writeValueAsString(response.getBody());
-
-
-
-//        System.out.println(movies);
-
-
+        ResponseEntity<String> response = restTemplate.exchange(builder.toString(), HttpMethod.GET, entity, String.class);
         return response.getBody();
     }
 
