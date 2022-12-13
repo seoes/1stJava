@@ -6,6 +6,7 @@
     import MovieInfo from "../Movie/MovieInfo.svelte";
     import MovieSearch from "../Movie/MovieSearch.svelte";
     import Loading from "../Movie/Loading.svelte";
+    import Testlist from "../Movie/Testlist.svelte";
     import {Route} from 'tinro';
     import Register from "../user/register.svelte"
     import Login from "../User/login.svelte";

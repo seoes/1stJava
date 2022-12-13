@@ -37,9 +37,11 @@ let selectedTheater = {};
         <SetMap bind:map={map}/>
         <SetMarker bind:map={map} bind:selectedTheater={selectedTheater}/>
     </div>
+    <a href="/theater/detail/123">123</a>
     <!-- <SearchLocation /> -->
     <!-- <FindMyLocation bind:map={map}/> -->
     <Route path='/detail/:_code'>
         <TheaterPopup bind:selectedTheater={selectedTheater}/>
     </Route>
+    
 </div>

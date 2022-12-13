@@ -41,7 +41,7 @@ public class MovieController {
                 .queryParam("title", title)
                 .queryParam("releaseDts", releaseDts)
                 .queryParam("sort", "RANK,1")
-                .queryParam("listCount=20", 20)
+                .queryParam("listCount", 100)
                 .queryParam("collection=kmdb_new2")
                 .build();
         HttpEntity entity = new HttpEntity<>(headers);
@@ -62,7 +62,7 @@ public class MovieController {
                 .queryParam("movieId", movieId)
                 .queryParam("movieSeq", movieSeq)
                 .queryParam("sort", "RANK,1")
-                .queryParam("listCount=20", 20)
+                .queryParam("listCount", 50)
                 .queryParam("collection=kmdb_new2")
                 .build();
         HttpEntity entity = new HttpEntity<>(headers);

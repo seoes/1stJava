@@ -6,7 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
+>>>>>>> e3e732d (add search)
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +37,9 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$/Server">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -98,15 +113,15 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
@@ -217,7 +232,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
