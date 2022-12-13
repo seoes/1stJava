@@ -6,7 +6,7 @@ let password;
  {
   fetch("/addmember", {
     type : "POST",
-    body : { 
+    body : {
       id : userID,
       pwd : password
     }
@@ -33,17 +33,22 @@ let password;
 </script>
 
 <div id="app">
+  <div id="WWMLogin">
+    WWM Login
+  </div>
+
   <table>
+    <div id="nameTag">아이디</div>
     <tr>
-      <td>아이디</td>
-      <td>
-        <input type="text" id="userID" placeholder="아이디"  bind:value={userID} size="30" />
+      <td id="tduserID">
+        <input type="text" id="userID"  bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
       </td>
     </tr>
+    
+    <div id="nameTag">비밀번호</div>
     <tr>
-      <td>비밀번호</td>
       <td>
-        <input type="text" id="password" placeholder="비밀번호"  bind:value={password} size="30" />
+        <input type="text" id="password"  bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
       </td>
     </tr>
     <tr>
@@ -66,14 +71,32 @@ let password;
 
 <style>
   #app {
-    margin: auto;
-    margin-top: 40px;
-    width: 30%;
-    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 100px;
     padding: 10px;
   }
 
   table, td {
-    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  #app > #WWMLogin {
+    font-weight: bold;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  td {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+  }
+
+  #app > table > #nameTag {
+    color: black;
+    font-weight: bold;
   }
 </style>
