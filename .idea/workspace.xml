@@ -7,6 +7,7 @@
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/register.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/register.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +184,7 @@
       <workItem from="1670832210242" duration="1531000" />
       <workItem from="1670895412596" duration="2552000" />
       <workItem from="1670898923800" duration="3668000" />
+      <workItem from="1670934951692" duration="1201000" />
     </task>
     <servers />
   </component>
