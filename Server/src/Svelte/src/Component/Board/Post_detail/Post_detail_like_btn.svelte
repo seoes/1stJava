@@ -3,7 +3,4 @@
     const likeClick = () => btn_like = btn_like+1;
 </script>
 
-
-
-
-<button on:click={likeClick}><a href="" uk-icon="heart"></a>    {btn_like}</button>
+<button on:click={likeClick}><a href="" uk-icon="heart"></a>{btn_like}</button>
