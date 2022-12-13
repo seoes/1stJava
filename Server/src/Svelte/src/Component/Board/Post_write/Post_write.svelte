@@ -33,23 +33,33 @@
 
         <input class="uk-input" type="text" aria-label="Author" bind:value={post.author}>
     </div>
-    <hr>
 
       <div class="uk-margin">
         <textarea class="uk-textarea" rows="5" placeholder="내용을 입력해주세요" aria-label="Textarea" bind:value={post.content}></textarea>
       </div>
       <div>
       </div>
-      <hr>
     </fieldset>
   </form>
+  
   <div>
       <button on:click={() => {console.log(post); addPost();}} class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom">저장</button>
-      <button on:click={() => {console.log(post)}}>post값 확인</button>
   </div>
+  <hr>
+
   
 <style>
   textarea {
     resize: none;
+  }
+  button {
+    border-radius: 71.5px;
+    background: #b9b9b9;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    border: none;
+    color : black;
+    font-weight: bold;
   }
 </style>
