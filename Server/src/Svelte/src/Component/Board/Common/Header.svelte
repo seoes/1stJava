@@ -5,10 +5,7 @@
 
 <header class="mdl-layout__header mdl -layout__header--waterfall">
 
-<div class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" >
-    <a href="/board/"><strong>게시판</strong></a>
+    <h3 class="uk-heading-line uk-text-center"><a href="/board/"><strong>게시판</strong></a></h3>
     <Route path = "/board/"></Route>
-</div>
 
 </header>
-<hr class="uk-divider-icon">
