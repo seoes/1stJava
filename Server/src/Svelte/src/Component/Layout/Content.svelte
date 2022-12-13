@@ -4,6 +4,8 @@
     import MovieCards from "../MovieCard/MovieCards.svelte";
     import SideNav from "../Nav/SideNav.svelte";
     import {Route} from 'tinro';
+    import Register from "../user/register.svelte"
+    import Login from "../User/login.svelte";
 
     let viewMode = 'map';
 </script>
@@ -20,5 +22,11 @@
     </Route>
     <Route path="/theater/*">
         <Map />
+    </Route>
+    <Route path="/register">
+        <Register />
+    </Route>
+    <Route path ="/login">
+        <Login />
     </Route>
 </div>

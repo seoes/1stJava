@@ -1,4 +1,5 @@
 <script>
+    import Login from "../User/login.svelte";
     import Content from "./Content.svelte";
 
 </script>
@@ -6,9 +7,9 @@
 <svelte:head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
     <link href='https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css' rel='stylesheet' type='text/css'> 
-
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </svelte:head>
 
 <style>
@@ -27,7 +28,7 @@
     }
     #header-logo > div > * {
         margin: 0px;
-        font-family: serif;
+        font-family: 'Binggrae-Two';
         font-weight: 400;
         color: #19416D;
     }
@@ -110,10 +111,11 @@
     <div id="header-menu">
         <h4><a>영화 탐색</a></h4>
         <h4><a>영화관 찾기</a></h4>
-        <h4>Login</h4>
-        <h4>Register</h4>
+       <h4><a href='../login'>Login</a></h4>
+       <h4><a href="../register">Register</a></h4>
+        
     </div>
 </div>
-<div uk-grid class="uk-grid-collapse">
+<div uk-grid class = "uk-grid-collapse">
     <Content />
 </div>
