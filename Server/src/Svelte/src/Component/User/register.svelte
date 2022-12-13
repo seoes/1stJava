@@ -1,10 +1,11 @@
+
+
 <script type="text/javascript">
     let userTel;
     let userID;
     let userEmail;
     let userName;
     let password;
-
     
     function submitInfo() {
         fetch("/addMember", {
@@ -39,14 +40,14 @@
         <div id="nameTag">아이디</div>
         <tr>
             <td>
-                <input type="text" id = "userID" name="userID" bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id = "userID" name="userID" bind:value={userID} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">이름</div>
         <tr>
             <td>
-                <input type="text" id="userName" name="userName"  bind:value={userName} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userName" name="userName"  bind:value={userName} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
@@ -54,21 +55,21 @@
         <tr>
             
             <td>
-                <input type="text" id="userTel" name="userTel" bind:value={userTel}  size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userTel" name="userTel" bind:value={userTel}  size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">이메일</div>
         <tr>
             <td>
-                <input type="text" id="userEmail" name="userEmail" bind:value={userEmail} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="userEmail" name="userEmail" bind:value={userEmail} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <br>
         <div id="nameTag">비밀번호</div>
         <tr>
             <td>
-                <input type="text" id="password" name="password" bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
+                <input class="uk-input" type="text" id="password" name="password" bind:value={password} size="30" style="border:0 solid black; background: #B9B9B9; width: 350px; height: 30px"/>
             </td>
         </tr>
         <tr>
@@ -125,8 +126,11 @@ table, td {
     text-align: center;
     height: 130px;
   }
+
+<<<<<<< HEAD
+
+
+
+=======
 </style>
-
-
-
-
+>>>>>>> origin/nayoung

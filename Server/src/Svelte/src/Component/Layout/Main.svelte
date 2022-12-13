@@ -73,10 +73,6 @@
         background-color: #E2E2E2;
         border-radius: 71.5px;
         border: 0;
-        
-
-        
-        
     }
 
     #header-search input {
