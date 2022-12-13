@@ -1,8 +1,11 @@
 <script>
-    import BoxOffice from "../BoxOffice.svelte";
+    import BoxOffice from "../Movie/BoxOffice.svelte";
     import Map from "../Map/Map.svelte";
     import MovieCards from "../MovieCard/MovieCards.svelte";
     import SideNav from "../Nav/SideNav.svelte";
+    import MovieInfo from "../Movie/MovieInfo.svelte";
+    import MovieSearch from "../Movie/MovieSearch.svelte";
+    import Loading from "../Movie/Loading.svelte";
     import {Route} from 'tinro';
 
     let viewMode = 'map';
@@ -15,5 +18,14 @@
     </Route>
     <Route path="/theater/*">
         <Map />
+    </Route>
+    <Route path="/movie/:movieId/:movieSeq">
+        <MovieInfo />
+    </Route>
+    <Route path="/search/:title">
+        <MovieSearch/>
+    </Route>
+    <Route path="/loading/:title">
+        <Loading />
     </Route>
 </div>
