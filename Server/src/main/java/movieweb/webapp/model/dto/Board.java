@@ -3,14 +3,21 @@ package movieweb.webapp.model.dto;
 import lombok.Data;
 import lombok.NonNull;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Data
-public class Post {
-    @NonNull int postID;
-    String userID;
-    @NonNull String title;
-    Date date; //DateTime형식으로 바꿔서 시간도 나타내줘야 할 듯
-    @NonNull String content;
-    String image; //포스터 파일 링크를 String으로 저장
+public class Board {
+
+    private Long id;
+
+    private String author;
+
+
+    private Integer likes;
+    private String title;
+    private String content;
+
+
+    private LocalDateTime createdDate;
+    private LocalDateTime modifiedDate;
 }
