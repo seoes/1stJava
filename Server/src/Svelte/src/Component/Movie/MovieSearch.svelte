@@ -127,6 +127,11 @@
     /* #movie-info {
         padding: 36px;
     } */
+    <style>
+    img {
+        border-radius: 20px;
+    }
+</style>
 
     h4 {
         font-size: 14px;
