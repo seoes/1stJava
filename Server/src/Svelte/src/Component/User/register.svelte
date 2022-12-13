@@ -127,10 +127,4 @@ table, td {
     height: 130px;
   }
 
-<<<<<<< HEAD
-
-
-
-=======
 </style>
->>>>>>> origin/nayoung
