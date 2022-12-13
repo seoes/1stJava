@@ -127,7 +127,3 @@ table, td {
     height: 130px;
   }
 </style>
-
-
-
-

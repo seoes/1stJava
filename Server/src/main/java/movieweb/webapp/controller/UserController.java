@@ -1,5 +1,7 @@
 package movieweb.webapp.controller;
 
+import lombok.NoArgsConstructor;
+//import lombok.RequiredArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import movieweb.webapp.model.dto.User;
@@ -38,7 +40,7 @@ public class UserController {
         return "ok";
     }
     @PostMapping("/addMember")
-    public String addMember(User dto) {
+    public String addMember(@RequestBody User dto) {
         logger.info("MemberController addMember()");
         boolean b = userService.addMember(dto);
         logger.info(dto.toString());
