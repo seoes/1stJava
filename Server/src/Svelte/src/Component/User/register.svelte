@@ -28,7 +28,7 @@
                 location.href="/";
             })
     }
-    </script>
+</script>
 
 
 
@@ -126,4 +126,5 @@ table, td {
     text-align: center;
     height: 130px;
   }
+
 </style>
