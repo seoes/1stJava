@@ -24,6 +24,29 @@
             FROM theater;
     </select>
 
+    <select id="getTheaterByCode" resultType="movieweb.webapp.model.dto.Theater">
+        SELECT province,
+               city,
+               code,
+               name,
+               screenCount,
+               seatCount,
+               filmCount,
+               count2d,
+               count3d,
+               count4d,
+               countImax,
+               company,
+               openDate,
+               address,
+               phone,
+               url,
+               latitude,
+               longitude
+        FROM theater
+        WHERE code = #{code}
+    </select>
+
     <update id="updateCoords" parameterType="movieweb.webapp.model.dto.Theater">
         UPDATE theater SET latitude = #{latitude}, longitude = #{longitude} WHERE code = #{code};
     </update>

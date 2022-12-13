@@ -1,11 +1,10 @@
 <script>
-  import Main from "./Component/Layout/Main.svelte";
-
+	import Main from "./Component/Layout/Main.svelte";
 	export let name;
 </script>
 
 
-    <Main/>
+<Main/>
 
 <style>
 	main {

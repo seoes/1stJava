@@ -19,6 +19,10 @@ public class TheaterController {
     @ResponseBody
     public List<Theater> yeah() {return theater.getAllTheaterData();}
 
+    @GetMapping("theatercode")
+    @ResponseBody
+    public Theater getTheater(@RequestParam("code") String code) {return theater.getTheaterByCode(code);}
+
     @PutMapping("setcoords")
     @ResponseBody
     public void setCoords(@RequestBody Theater theater) {

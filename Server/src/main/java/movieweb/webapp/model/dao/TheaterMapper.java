@@ -12,4 +12,6 @@ import java.util.List;
 public interface TheaterMapper {
     List<Theater> getAllTheaterData();
     void updateCoords(Theater theater);
+
+    Theater getTheaterByCode(String code);
 }

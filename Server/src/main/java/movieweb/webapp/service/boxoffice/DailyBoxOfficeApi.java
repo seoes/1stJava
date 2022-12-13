@@ -23,7 +23,7 @@ package movieweb.webapp.service.boxoffice;
 @RestController
 public class DailyBoxOfficeApi{
 
-    @GetMapping("movie")
+    @GetMapping("daily")
     public String getAPI() {
 
         HashMap<String, Object> result = new HashMap<String, Object>();
