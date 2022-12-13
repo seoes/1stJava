@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
+>>>>>>> 3b31b44
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +196,8 @@
       <updated>1664314848992</updated>
       <workItem from="1670831810475" duration="249000" />
       <workItem from="1670832210242" duration="1531000" />
-      <workItem from="1670895412596" duration="860000" />
+      <workItem from="1670895412596" duration="2552000" />
+      <workItem from="1670898923800" duration="3668000" />
     </task>
     <servers />
   </component>

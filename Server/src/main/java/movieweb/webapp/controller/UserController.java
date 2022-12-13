@@ -41,7 +41,6 @@ public class UserController {
     public String addMember(User dto) {
         logger.info("MemberController addMember()");
         boolean b = userService.addMember(dto);
-
         logger.info(dto.toString());
 
         if(b) {

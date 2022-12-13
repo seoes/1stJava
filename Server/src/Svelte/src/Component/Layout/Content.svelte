@@ -8,6 +8,8 @@
     import Loading from "../Movie/Loading.svelte";
     import Testlist from "../Movie/Testlist.svelte";
     import {Route} from 'tinro';
+    import Register from "../user/register.svelte"
+    import Login from "../User/login.svelte";
 
     let viewMode = 'map';
 </script>
@@ -20,6 +22,12 @@
     <Route path="/theater/*">
         <Map />
     </Route>
+    <Route path="/register">
+        <Register />
+    </Route>
+    <Route path ="/login">
+        <Login />
+        </Route>
     <Route path="/movie/:movieId/:movieSeq">
         <MovieInfo />
     </Route>
