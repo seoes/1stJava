@@ -14,7 +14,7 @@
     import List from "../Board/List/List.svelte"
     // import Main from "./Main.svelte";
     import ListTable from "../Board/List/List_table.svelte";
-    import {Route} from 'tinro';
+    // import {Route} from 'tinro';
     let viewMode = 'map';
 </script>
 

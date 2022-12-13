@@ -16,12 +16,12 @@
     let markerSize = new kakao.maps.Size(48, 48);
     let markerOption = {offset: new kakao.maps.Point(24, 48)}
 
-    let cgvMarker = new kakao.maps.MarkerImage('./img/marker/cgv_marker.png' ,markerSize, markerOption);
-    let cgv4dxMarker = new kakao.maps.MarkerImage('./img/marker/cgv_4dx_marker.png' ,markerSize, markerOption);
-    let cgvImaxMarker = new kakao.maps.MarkerImage('./img/marker/cgv_imax_marker.png' ,markerSize, markerOption);
-    let lotteMarker = new kakao.maps.MarkerImage('./img/marker/lottecinema_marker.png' ,markerSize, markerOption);
-    let megaboxMarker = new kakao.maps.MarkerImage('./img/marker/megabox_marker.png' ,markerSize, markerOption);
-    let otherMarker = new kakao.maps.MarkerImage('./img/marker/other_marker.png' ,markerSize, markerOption);
+    let cgvMarker = new kakao.maps.MarkerImage('/img/marker/cgv_marker.png' ,markerSize, markerOption);
+    let cgv4dxMarker = new kakao.maps.MarkerImage('/img/marker/cgv_4dx_marker.png' ,markerSize, markerOption);
+    let cgvImaxMarker = new kakao.maps.MarkerImage('/img/marker/cgv_imax_marker.png' ,markerSize, markerOption);
+    let lotteMarker = new kakao.maps.MarkerImage('/img/marker/lottecinema_marker.png' ,markerSize, markerOption);
+    let megaboxMarker = new kakao.maps.MarkerImage('/img/marker/megabox_marker.png' ,markerSize, markerOption);
+    let otherMarker = new kakao.maps.MarkerImage('/img/marker/other_marker.png' ,markerSize, markerOption);
 
     function setImg(theater) {
         switch(theater.company) {

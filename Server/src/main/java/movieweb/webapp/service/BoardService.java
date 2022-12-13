@@ -3,7 +3,6 @@ package movieweb.webapp.service;
 
 import movieweb.webapp.domain.repository.BoardRepository;
 import movieweb.webapp.model.dto.Board;
-import movieweb.webapp.model.dto.BoardDto;
 import movieweb.webapp.model.dto.Theater;
 import org.springframework.stereotype.Service;
 

@@ -5,61 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4513c5c5-bd52-4a7c-a5c0-3b0ffa35c2ee" name="Changes" comment="">
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/Server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
->>>>>>> 3b31b44
-=======
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/User/login.svelte" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Content.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Main.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Layout/Modal.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/Map.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/TheaterPopup.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Movie/MovieSearch.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/boxoffice/DailyBoxOfficeApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
->>>>>>> e3e732d (add search)
->>>>>>> 6c5aad2
-=======
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Common/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Common/Header.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List_table.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List_table.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List_write_btn.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/List/List_write_btn.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail_like_btn.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_detail/Post_detail_like_btn.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_write/Post_write.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Board/Post_write/Post_write.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Header.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/List.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post_add.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Post_edit.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Boarding/Posts.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/Svelte/src/Component/Map/SetMarker.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/PostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dao/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/model/dto/BoardDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/movieweb/webapp/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/PostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/mybatis/mapper/BoardMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/resources/static/build/bundle.js.map" afterDir="false" />
->>>>>>> 1df6956
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +48,19 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="seo-test" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="seo-test" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="seo-test" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -143,15 +110,6 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "node.js.selected.package.tslint": "(autodetect)"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
@@ -167,7 +125,6 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
->>>>>>> 1df6956
   }
 }</component>
   <component name="RecentsManager">
@@ -179,7 +136,7 @@
       <recent name="$PROJECT_DIR$/Server/src/main/resources/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Server [bootRun]">
+  <component name="RunManager" selected="Spring Boot.SeoTestApplication">
     <configuration name="Server [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
